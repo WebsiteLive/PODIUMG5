@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    height: 200vh;
+    background-color: #FEEEE2;
+}
+
+#nav-checkbox, .nav-toggle{
+    display: none;
+}
+
+.content{
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.content p{
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    transition: background-color 0.5s ease;
+}
+.logo{
+    display: flex;
+}
+.logo .podium{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 2rem;
+}
+
+.logo h2{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 2rem;
+    margin-top: 1.3rem;
+    padding-left: 1rem;
+}
+
+.nav-menu li{
+    display: inline-block;
+}
+
+.nav-menu li a{
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0 15px;
+}
+
+.nav-menu li a:hover{
+    color: #FEEEE2;
+}
+
+.active{
+    background: #65453A;
+}
+
+.active a:hover{
+    color: #fff !important;
+}
+
+
+
+
+@media only screen and (max-width: 600px){
+    header{
+        display: block;
+    }
+
+    .logo{
+        margin-left: 15px;
+    }
+
+    .nav-toggle{
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        margin: 0 1rem;
+        top: 25px;
+        right: 0;
+    }
+
+    .nav-toggle img{
+        width: 30sspx;
+    }
+
+    .close,
+    input[type='checkbox']{
+        display: none;
+    }
+
+    #nav-checkbox:Checked ~ .nav-menu{
+        background: #65453A;
+        margin-top: 10px;
+        padding: 10px 0;
+        border-top: 1px solid #fff;
+    }
+    
+
+    .nav-menu li{
+        display: none;
+        margin: 10px 0;
+    }
+
+    #nav-checkbox:checked ~ ul.nav-menu li{
+        display: block;
+    }
+
+    #nav-checkbox:checked ~ label.nav-toggle .open{
+        display: none;
+    }
+
+    #nav-checkbox:checked ~ label.nav-toggle .close{
+        display: block;
+    }
+
+
+
+}
