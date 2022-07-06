@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Bootstrap file link-->
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<!--JavaScript online link-->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<!--customized css file link-->
+	<link rel="stylesheet" type="text/css" href="css/style.css"> 
+	<!--fontawesome file link-->
+	<link rel="stylesheet" type="text/css" href="fontawesome/css/all.css"> 
+	<!--Online link for text animation-->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<title>HOME</title>
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <!--<?php include 'include 'navigation.html'?>-->
+    <header>
+        <div class="logo">
+            <img src="img/podium.png" alt="" class="podium">
+            <h2>PODIUM</h2>
+        </div>
+
+        <div class="navigation">
+            <input type="checkbox" id="nav-checkbox">
+            <label for="nav-checkbox" class="nav-toggle">
+                <img src="img/open.png" alt="open menu" class="open">
+                <img src="img/close.png" alt="close menu" class="close">
+            </label>
+
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+	<!--IMAGE SLIDER-->
+	<div id="carouselExampleIndicators" class="carousel slide image-carousel" data-ride="carousel">
+	    <ol class="carousel-indicators">
+	    	<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+	    	<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+	   		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		</ol>
+	    <div class="carousel-inner">
+	    	<div class="carousel-item active">
+	        	<img class="d-block w-100 image-carousel" src="img/m.jpg" alt="PODIUM">
+	        	<div class="carousel-caption d-md-block text" style="color: #65453A;">
+				    <h5 class="animate__animated animate__slideInUp text">PODIUM: Artist Freelancing Website</h5>
+				    <p class="animate__animated animate__slideInUp"><i>"Every artist was first an amateur."</i></p>
+				    <p class="animate__animated animate__slideInUp">&nbsp;&nbsp;&ndash; Ralph Waldo Emerson</p>
+				    <!--&nbsp; = space, &ndash; = en dash "-" -->
+				</div>
+	    	</div>
+		    <div class="carousel-item">
+		        <img class="d-block w-100 image-carousel" src="img/slide1.jpg" alt="GALLERY">
+		        <div class="carousel-caption d-md-block">
+				    <h5 class="text">DREAM BIG AND LET YOUR ART SHINE</h5>
+					<?php
+					if(isset($_SESSION['User_Id'])){
+						
+						
+					}
+					else{
+						echo '<p><a href="signup.php">Join Us Now!</a></p>';
+					}
+				?>
+				    
+				</div>
+		    </div>
+		    <div class="carousel-item">
+		        <img class="d-block w-100 image-carousel" src="img/wall.jpg" alt="ARTS">
+		        <div class="carousel-caption d-md-block">
+				   <h5 class="animate__animated animate__backInRight text">DREAM BIG AND LET YOUR ART SHINE</h5>
+				   <p class="animate__animated animate__backInLeft" id="cap">Become an explorer in a world full of arts, join us now for free to experience the first artist platform in the Philippines.</p>
+				</div>
+		    </div>
+	  	</div>
+	</div>
+    <section class="about" id="about">
+        <div class="container">	  
+            <div class="row justify-content-around">
+                <div class="col-sm-6">
+                    <img class="img-fluid" src="img/slide2.jpg" alt="artwork">
+                </div>
+                <div class="col-sm-6">
+    
+                    <div class ="container">
+                        <div class="about">
+                            <h4>The Virgin and Child with St Anne</h4>
+                            <br>
+                            <strong>Leonardo da Vinci</strong>
+                            <br>
+                            <h5>Oil on wood</h5>
+                            <em>168 x 130 cm (5 1/2 x 4 1/2 ft.)</em>
+                            <br><br><br>
+                            <p>
+                            This painting depicted St. Anne, her daughter the Virgin Mary, and the infant Jesus. Christ is shown grappling with a sacrificial lamb symbolizing his Passion whilst the Virgin tries to restrain him. The painting was commissioned as the high altarpiece for the Church of Santissima Annunziata in Florence and its theme had long preoccupied Leonardo.
+                            <br>
+                            <br>
+                            Here, he has arranged the figures as a pyramid set in a landscape. While the theme of the Virgin Mary, her mother (Anne), and Jesus was common, it is unusual for Mary to be portrayed in her mother's lap. The background landscape, whose crags are seemingly replicated in Anne's veil, virtually melts in its sfumato haze. The baby lamb is both a symbol of innocence and of Jesus' sacrifice for humanity, memorialized in John the Baptist's reference to Jesus as the "Lamb of God".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="contact" id="contact">
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>
