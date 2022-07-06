@@ -5,13 +5,138 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="profileinfo.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <!--CONTAINER-->
+    <div class="container-fluid" style="max-width: 50rem;">
+        <div class="card">
+            <div class="card-header" style="background-color:#65453A;">
+            Personal Information
+            <p class="font">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="card-body text-center">
+                <!--
+                <center>
+                <div class="profile-pic-div">
+                    <img src="img/yoshihara-motoki-art.jpg" id="photo">
+                    <input type="file" id="file">
+                    <label for="file" id="uploadBtn">Choose Photo</label>
+                </div>
+                </center>
+                -->
 
-     
-     </div>
-     
+                <!--FORM-->
+                <form>
+                    <div class="form-row" style="padding-left: 3rem;">
+                        <div class="col" style="max-width: 20rem;">
+                            <input type="text" class="form-control" id="FN" placeholder="First Name">
+                        </div>
+                        <div class="col" style="max-width: 20rem;">
+                            <input type="text" class="form-control" id="LN" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="input-group" style="padding-left: 3rem;">
+                        <textarea class="form-control" style="max-width: 39.5rem;" aria-label="With textarea" placeholder="Bio"></textarea>
+                    </div>
+                    <br>
+
+                <!--SOCMED LINKS-->
+                    <h5>Social Media Links</h5>
+                    <div class="form-row" style="padding-left: 3rem;">
+                        <div class="col" style="max-width: 20rem;">
+                            <input type="text" class="form-control" id="facebook" placeholder="Facebook">
+                        </div>
+                        <div class="col" style="max-width: 20rem;">
+                            <input type="text" class="form-control" id="instagram" placeholder="Instagram">
+                        </div>
+                    </div>
+                </form>
+                <br>
+                <br>
+                <hr>
+
+                <!--PORTFOLIO-->
+                <h5 style="font-weight: bold;">PORTFOLIO</h5>
+                <hr>
+
+                <div class="container">
+                    <input type="file" id="file-input" accept="image/png, image/jpeg" onchange="preview()" multiple>
+                    <label for="file-input">
+                        <i class="fas fa-upload"></i> &nbsp; Upload your Projects
+                    </label>
+                    <p id="num-of-files">No Files Chosen</p>
+                    <div id="images"></div>
+                </div>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        let fileInput = document.getElementById("file-input");
+        let imageContainer = document.getElementById("images");
+        let numOfFiles = document.getElementById("num-of-files");
+
+        function preview(){
+            imageContainer.innerHTML = "";
+            numOfFiles.textContent = `${fileInput.files.length} Files Selected`;
+
+            for(i of fileInput.files){
+                let reader = new FileReader();
+                let figure = document.createElement("figure");
+                let figCap = document.createElement("figcaption");
+                figCap.innerText = i.name;
+                figure.appendChild(figCap);
+                reader.onload=()=>{
+                    let img = document.createElement("img");
+                    img.setAttribute("src",reader.result);
+                    figure.insertBefore(img,figCap);
+                }
+                imageContainer.appendChild(figure);
+                reader.readAsDataURL(i);
+            }
+        }
+    </script>
+    <!--
+    <script type="text/javascript">
+        //declearing html elements
+
+        const imgDiv = document.querySelector('.profile-pic-div');
+        const img = document.querySelector('#photo');
+        const file = document.querySelector('#file');
+        const uploadBtn = document.querySelector('#uploadBtn');
+
+        //if user hover on img div 
+
+        imgDiv.addEventListener('mouseenter', function(){
+            uploadBtn.style.display = "block";
+        });
+
+        //if we hover out from img div
+
+        imgDiv.addEventListener('mouseleave', function(){
+            uploadBtn.style.display = "none";
+        });
+
+
+        file.addEventListener('change', function(){
+            const choosedFile = this.files[0];
+
+            if (choosedFile) {
+
+                const reader = new FileReader(); //FileReader is a predefined function of JS
+
+                reader.addEventListener('load', function(){
+                    img.setAttribute('src', reader.result);
+                });
+
+                reader.readAsDataURL(choosedFile);
+            }
+        });
+    </script>
+-->
 </body>
 </html>
