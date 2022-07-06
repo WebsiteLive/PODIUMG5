@@ -70,27 +70,42 @@ header{
 }
 
 .nav-menu li a:hover{
-    color: #65453A;
+    color: #7c1111;
+    text-shadow: 0 0 2px black;
+    border-bottom: 2px solid white;
+    border-radius: 2px;
+    transition: all ease-in-out;
+    transition-delay: 0.1s;
+    
+}
+
+.nav-menu li .active{
+    color: white;
+    text-shadow: 0px 1px 15px #610e0e;
 }
 
 .active{
     border-bottom: 2px solid white;
+    border-radius: 2px;
     transition: ease-in-out;
     transition-delay: 0.3s;
 }
 
 .active-lgn{
     background-color: #ff0000;
+    box-shadow: 0 0 8px black;
     border-radius: 5px;
-    margin-left: 20px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-left: 1vw;
 }
 
-.active-lgn li a:hover{
-    color: black;
+.active-lgn:hover{
+    transform: scale(1.2);
+	transition: all .2s linear;
+    background-color: #7c1111;
 }
-.nav-menu li .active{
-    color: white;
-}
+
 /* End of Nav Bar */
 
 .active-nav{
@@ -241,6 +256,9 @@ header{
 
     #nav-checkbox:checked ~ label.nav-toggle .close{
         display: block;
+    }
+    .active-lgn:hover{
+        transform: scale(1);
     }
 
 
