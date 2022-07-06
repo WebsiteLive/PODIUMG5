@@ -58,6 +58,7 @@ header{
 }
 
 .nav-menu li{
+    margin-top: 1.3rem;
     display: inline-block;
 }
 
@@ -72,14 +73,31 @@ header{
     color: #65453A;
 }
 
+.active{
+    border-bottom: 2px solid white;
+    transition: ease-in-out;
+    transition-delay: 0.3s;
+}
 
+.active-lgn{
+    background-color: #ff0000;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.active-lgn li a:hover{
+    color: black;
+}
+.nav-menu li .active{
+    color: white;
+}
 /* End of Nav Bar */
 
-.active{
+.active-nav{
     background: #65453A;
 }
 
-.active a:hover{
+.active-nav a:hover{
     color: #fff !important;
 }
 
