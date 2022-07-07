@@ -9,7 +9,14 @@ $(document).ready(function(){
     });
 });
 
+<<<<<<< Updated upstream
 $('.nav-menu li a').click(function(){
     $('.nav-menu li a').removeClass('active');
     $(this).addClass('active');
 })
+=======
+function togglePopup() {
+    document.getElementById("popup-1")
+     .classList.toggle("active");
+   }
+>>>>>>> Stashed changes
