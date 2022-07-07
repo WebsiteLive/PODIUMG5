@@ -130,7 +130,7 @@ margin-top: 20rem;
  position: absolute;
  right: 20px;
  width: 30px;
- height: 30px;
+ height: 20px;
  color: white;
  font-size: 40px;
  }
@@ -212,6 +212,17 @@ p{
 color: #bfc0c0;
 padding: 20px;
 }
+
+.popup .close-btn {
+    position: absolute;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 40px;
+    }
+   
+
 
 .active-nav{
     background: #65453A;
@@ -647,10 +658,6 @@ form{
     #nav-checkbox:checked ~ label.nav-toggle .close{
         display: block;
     }
-<<<<<<< Updated upstream
-    .active-lgn:hover{
-        transform: scale(1);
-=======
     
     form .action input[type="delete"]{
         width: auto;
@@ -680,7 +687,6 @@ form{
     form .action input{
       margin-bottom: 10px;
       width: 100%;
->>>>>>> Stashed changes
     }
 
     .text-container p{
