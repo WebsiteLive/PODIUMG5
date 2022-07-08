@@ -97,6 +97,7 @@ header{
 
 }
 
+<<<<<<< Updated upstream
 .first-button:active, .first-button:focus{
     border-bottom: 2px solid white;
     border-radius: 2px;
@@ -121,8 +122,13 @@ header{
     0 100px 80px rgba(0, 0, 0, 0.12)
   }
 
+=======
+.active-navigation{
+    background: #FEEEE2;
+}
+>>>>>>> Stashed changes
 
-.active-nav a:hover{
+.active-navigation a:hover{
     color: #fff !important;
 }
 
@@ -468,6 +474,10 @@ p button:active{
 /* End of landingpage */
 
 /* Start of Services Page*/
+
+.services{
+  height: 100vh;
+}
 
 .card-img-top {
   height: 200px;
