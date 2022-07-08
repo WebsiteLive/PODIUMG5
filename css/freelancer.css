@@ -29,25 +29,6 @@ section{
     padding: 1rem;
 }
 
-.btn{
-    padding: .7rem 3rem;
-    background: #333;
-    color: #fff;
-    cursor: pointer;
-    margin-top: 1rem;
-    font-size: 2rem;
-    border-radius: 5rem;
-}
-
-.btn i{
-    padding: 0 .5rem;
-    font-size: 1.8rem;
-}
-
-.btn:hover{
-    background: var(--yellow);
-}
-
 .heading{
     text-align: center;
     margin: 5rem 6rem;
@@ -166,8 +147,7 @@ header .navbar ul li a:hover{
     width: 30%;
     align-items: center;
     justify-content: center;
-    padding: 1rem 0;
-    margin-top: 28rem;
+    margin-top: 0;
 }
 .home-about h3{
     font-size: 2rem;
@@ -185,10 +165,23 @@ header .navbar ul li a:hover{
     margin:0 auto;
     padding: 0 10rem;
  }
- 
- .box-container .title{
+ .container{
+    width: 100%;
+    height: 100vh;
+    padding-left: 10rem;
+ }
+ .aboutme{
     font-size: 3.5rem;
-    color: #65453A;
+    color: #000;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 2rem;
+ }
+ .box-container .title{
+    margin-top: 2rem;
+    font-size: 3.5rem;
+    color: #000;
     margin-bottom: 3rem;
     text-transform: uppercase;
     text-align: center;
@@ -196,8 +189,9 @@ header .navbar ul li a:hover{
  
  .box-container .products-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap:2rem;
+    margin:auto;
  }
  
  .box-container .products-container .product{
@@ -264,8 +258,9 @@ header .navbar ul li a:hover{
     background: #fff;
     position: relative;
     margin:2rem;
-    width: 80rem;
+    width: 60rem;
     height: 70rem;
+    margin-left: 2rem;
  }
  
  .products-preview .preview.active{
@@ -274,7 +269,7 @@ header .navbar ul li a:hover{
  
  .products-preview .preview img{
     height: 40rem;
-    width: 70rem;
+    width: 53rem;
  }
  
  .products-preview .preview .fa-times{
@@ -290,22 +285,9 @@ header .navbar ul li a:hover{
  }
  
  .products-preview .preview h3{
-    color:#65453A;
+    color:#000;
     padding: 2rem 0 0 0;
     font-size: 2.5rem;
- }
- 
- .products-preview .preview .stars{
-    padding:1rem 0;
-    font-size: 1.7rem;
- }
- 
- .products-preview .preview .stars i{
-    color:#27ae60;
- }
- 
- .products-preview .preview .stars span{
-    color:#999;
  }
  
  .products-preview .preview p{
@@ -415,14 +397,24 @@ header .navbar ul li a:hover{
         width: 100%;
         margin-left: 4rem;
     }
-    .education .box-container .box{
-        width: 100%;
+    .aboutme{
+    font-size: 3.5rem;
+    color: #000;
+    margin-bottom: 0rem;
+    text-transform: uppercase;
+    text-align: center;
     }
+    .box-container .title{
+        margin-top: 5rem;
+        font-size: 3.5rem;
+        color: #000;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+        text-align: center;
+     }
+     
     .portfolio .box-container .box{
         width: 100%;
-    }
-    .contact .row form{
-        margin: 3rem 0;
     }
     .home .description h1{
         font-size: 4rem;
@@ -441,7 +433,7 @@ header .navbar ul li a:hover{
         width: 100%;
         align-items: center;
         justify-content: center;
-        margin-top: -15rem;
+        margin-top: 0rem;
         margin-bottom: 17rem;
         padding: 5%;
     }
