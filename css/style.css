@@ -97,7 +97,6 @@ header{
 
 }
 
-<<<<<<< Updated upstream
 .first-button:active, .first-button:focus{
     border-bottom: 2px solid white;
     border-radius: 2px;
@@ -110,7 +109,7 @@ header{
   }
 
 
-.active-nav{
+.active-navigation{
   border-radius: 5px;
   background-color: rgb(254,238,226,1);
   box-shadow:
@@ -122,11 +121,6 @@ header{
     0 100px 80px rgba(0, 0, 0, 0.12)
   }
 
-=======
-.active-navigation{
-    background: #FEEEE2;
-}
->>>>>>> Stashed changes
 
 .active-navigation a:hover{
     color: #fff !important;
