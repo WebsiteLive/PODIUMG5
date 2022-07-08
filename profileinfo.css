@@ -2,7 +2,7 @@
     font-family: montserrat;
 }
 .card{
-    border: #65453A;
+    border: #000;
     border-width: 3px;
 }
 .card-header{
@@ -17,10 +17,7 @@
     font-weight: normal;
 }
 /**CHOOSE PROFILE PIC**/
-.rounded-circle{
-    width: 7rem; 
-    height: 7rem;
-}
+
 .profile-pic-div{
     height: 150px;
     width: 150px;
@@ -34,21 +31,30 @@
     margin-left: 12rem;
     z-index: 2;
 }
+#photo{
+    height: 100%;
+    width: 100%;
+}
 
+#file{
+    display: none;
+}
 
 
 #uploadBtn{
     height: 40px;
     width: 100%;
+    position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     color: wheat;
-    line-height: 30px;
+    line-height: 10px;
     font-family: sans-serif;
     font-size: 15px;
     cursor: pointer;
+    display: none;
 }
 
 form{
@@ -73,8 +79,8 @@ input[type="file"]{
 label{
     display: block;
     position: relative;
-    background-color: #65453A;
-    color: #ffffff;
+    background-color: #333;
+    color: #fff;
     font-size: 18px;
     text-align: center;
     width: 300px;
