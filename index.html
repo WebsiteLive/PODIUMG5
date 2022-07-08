@@ -22,8 +22,6 @@
     <title>Document</title>
 </head>
 <body>
-
-   
     <header>
         <div class="logo">
             <img src="img/podium.png" alt="" class="podium">
@@ -352,5 +350,19 @@
         </footer>
     </div>
     <script src="js/script.js"></script>
+    
+<script type="text/javascript">
+    $(document).ready(function(){
+    $(window).bind('scroll', function(){
+        var gap = 50;
+        if($(window).scrollTop()> gap){
+            $('header').addClass('active-navigation');
+        } else{
+            $('header').removeClass('active-navigation');
+        }
+    });
+});
+</script>
+
 </body>
 </html>

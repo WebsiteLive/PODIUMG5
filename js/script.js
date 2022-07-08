@@ -2,9 +2,9 @@ $(document).ready(function(){
     $(window).bind('scroll', function(){
         var gap = 50;
         if($(window).scrollTop()> gap){
-            $('header').addClass('active-nav');
+            $('header').addClass('active-navigation');
         } else{
-            $('header').removeClass('active-nav');
+            $('header').removeClass('active-navigation');
         }
     });
 });

@@ -109,7 +109,7 @@ header{
   }
 
 
-.active-nav{
+.active-navigation{
   border-radius: 5px;
   background-color: rgb(254,238,226,1);
   box-shadow:
@@ -122,7 +122,7 @@ header{
   }
 
 
-.active-nav a:hover{
+.active-navigation a:hover{
     color: #fff !important;
 }
 
@@ -502,6 +502,10 @@ p button:active{
 /* End of landingpage */
 
 /* Start of Services Page*/
+
+.services{
+  height: 100vh;
+}
 
 .card-img-top {
   height: 200px;
