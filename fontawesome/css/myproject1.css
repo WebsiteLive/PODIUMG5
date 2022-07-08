@@ -1,0 +1,24 @@
+.bar{
+	background-color: #C46210; //alloy orange//
+	height: 20px;
+	width: 100px;
+}
+ul{
+	list-style-type: none;
+	margin: 20px;
+}
+ul li{
+	display: inline-block;
+}
+ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 7px 15px;
+}
+ul li a:hover{
+	background-color: #E25822;
+	color: #fff;
+}
+.login{
+	float: right;
+}
