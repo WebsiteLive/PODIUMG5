@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title></title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <script src="include/scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a7db501430.js" crossorigin="anonymous"></script>
+  </head>
+  
+  <body>
+      <!---Navbar-->
+      
+<header>
+    <div class="logo">
+        <img src="img/podium.png" alt="" class="podium">
+        <h2>PODIUM</h2>
+    </div>
+
+    <div class="navigation">
+        <input type="checkbox" id="nav-checkbox">
+        <label for="nav-checkbox" class="nav-toggle">
+            <img src="img/open.png" alt="open menu" class="open">
+            <img src="img/close.png" alt="close menu" class="close">
+        </label>
+
+        <ul class="nav-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button onclick="togglePopup()" class="first-button">LOGIN</button></li>
+            <div class="popup" id="popup-1">
+            <form action="login.php">
+                <div class="content">
+                 <div class="close-btn" onclick="togglePopup()" style="cursor: pointer;"><img src="img/close.png" alt=""></div> 
+             <h1 class="login-modal">LOGIN</h1> 
+               <div class="input-field"><input placeholder="Email" class="validate"></div>
+               <div class="input-field"><input type="password" placeholder="Password" class="validate"></div>
+                 <button class="second-button">Login</button>
+                 <p>Don't have an account? <a href="">Sign Up</a></p>
+                </div>
+               </div>
+            </form>
+        </ul>
+    </div>
+          
+      </header>
+	</div>
+    
+</body>
+
+
+
+
+

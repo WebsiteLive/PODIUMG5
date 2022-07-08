@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -10,52 +10,18 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="gallerymarket.css">
+    <link rel="stylesheet" href="styles/gallerymarketpage.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a7db501430.js" crossorigin="anonymous"></script>
 
-</head><header>
-    <div class="logo">
-        <img src="img/podium.png" alt="" class="podium">
-        <h2>PODIUM</h2>
-    </div>
+    <?php
+        include 'navigation.html';
+    ?>
+</head>
 
-    <div class="navigation">
-        <input type="checkbox" id="nav-checkbox">
-        <label for="nav-checkbox" class="nav-toggle">
-            <img src="img/open.png" alt="open menu" class="open">
-            <img src="img/close.png" alt="close menu" class="close">
-        </label>
+<body class="container">
 
-        <ul class="nav-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><button onclick="togglePopup()" class="first-button">LOGIN</button></li>
-            <div class="popup" id="popup-1">
-            <form action="login.php">
-                <div class="content">
-                 <div class="close-btn" onclick="togglePopup()" style="cursor: pointer;"><img src="img/close.png" alt=""></div> 
-             <h1 class="login-modal">LOGIN</h1> 
-               <div class="input-field"><input placeholder="Email" class="validate"></div>
-               <div class="input-field"><input type="password" placeholder="Password" class="validate"></div>
-                 <button class="second-button">Login</button>
-                 <p>Don't have an account? <a href="">Sign Up</a></p>
-                </div>
-               </div>
-            </form>
-        </ul>
-    </div>
-</header>
-
-
-
-<body class="body">
-    <div>
-        
-    </div>
-    
     <div class="row">
         <div class="col-sm-4">
             <aside class="side-area product-side side-shadow mt-5">
@@ -67,23 +33,22 @@
                     <ul class="list">
                         <p></p>
                         <li>
-                            <form method="post">
-                                <div class="items">
-                                    <a type="submit" name= "all" href="gallerymarketpage_new.php"><span class="item"
-                                            data-name="all">All</span></a>
-                                    <br>
-                                    <br>
-                                    <a type="submit" name= "Paint" href="gallerymarketpage_new.php?type=Paint"><span class="item" data-name="painting">Painting</span></a>
-                                    <br>
-                                    <br>
-                                    <a type="submit" name= "Draw" href="gallerymarketpage_new.php?type=Draw"><span class="item" data-name="drawing">Drawing</span></a>
-                                    <br>
-                                    <br>
-                                    <a type="submit" name= "Digital" href="gallerymarketpage_new.php?type=Digital"><span class="item" data-name="digitalart">Digital Art</span></a>
-                                   
 
-                                </div>
-                            </form>
+                            <div class="items">
+                                <a href="gallerymarketpage_new.html"><span class="item" data-name="all">All</span></a>
+                                <br>
+                                <br>
+                                <a href=""><span class="item" data-name="painting">Painting</span></a>
+                                <br>
+                                <br>
+                                <a href=""><span class="item" data-name="drawing">Drawing</span></a>
+                                <br>
+                                <br>
+                                <a href=""><span class="item" data-name="digitalart">Digital Art</span></a>
+
+
+                            </div>
+
                     </ul>
 
                     <div>
@@ -99,125 +64,96 @@
                     <div class="col-lg-12">
                         <div class="product-top d-flex justify-content-between align-items-center">
                             <div class="product-sec product-item">
-                                <h2 class="my-5"></h2>
+                                <h2 class="my-5">Gallery Market</h2>
                             </div>
                         </div>
                     </div>
 
 
                     <div class="container">
-                        <h3 class="title">Gallery Market</h3>
+
+                        <h3 class="title"> organic products </h3>
+
                         <div class="products-container">
                             <div class="row">
-                            <?php
-                            include 'dbcon.php';
-                            if(!$con){
-                                header("Location: Ghost.html");
-                            }
-                            else{
-
-                                if(isset($_GET['type'])){
-                                    $type=$_GET['type'];
-                                    
-
-                                    if($type == "Digital"){
-                                    $query = "SELECT*FROM art_submission WHERE post_type='Sale'AND item_type='Digital Art'";
-                                    $result = odbc_exec($con,$query);
-                               
-                                    if(!empty($result)) {
-                                        while ($row = odbc_fetch_array($result)) {
-                                        $id=$row['thread_Id'];    
-                                        $title=$row['item_title'];
-                                        $price=$row['price'];
-                                        $img_url=$row['item_imgurl'];
-                                        $desc=$row['post_description'];
-                                        include "view_items.php";
-                                        }
-                                    }
-                                    }
-                                    else if($type == "Draw"){
-                                        $query = "SELECT*FROM art_submission WHERE post_type='Sale'AND item_type='Drawing'";
-                                        $result = odbc_exec($con,$query);
-                                   
-                                        if(!empty($result)) {
-                                            while ($row = odbc_fetch_array($result)) {
-                                            $id=$row['thread_Id'];    
-                                            $title=$row['item_title'];
-                                            $price=$row['price'];
-                                            $img_url=$row['item_imgurl'];
-                                            $desc=$row['post_description'];
-                                            include "view_items.php";
-                                            }
-                                        }
-                                    }
-                                    else if($type == "Paint"){
-                                        $query = "SELECT*FROM art_submission WHERE post_type='Sale'AND item_type='Painting'";
-                                        $result = odbc_exec($con,$query);
-                                   
-                                        if(!empty($result)) {
-                                            while ($row = odbc_fetch_array($result)) {
-                                            $id=$row['thread_Id'];    
-                                            $title=$row['item_title'];
-                                            $price=$row['price'];
-                                            $img_url=$row['item_imgurl'];
-                                            $desc=$row['post_description'];
-                                            include "view_items.php";
-                                            }
-                                        }
-                                    }
-                                }
-                                else{
-                                    $query = "SELECT*FROM art_submission WHERE post_type='Sale'";
-                                    $result = odbc_exec($con,$query);
-                               
-                                    if(!empty($result)) {
-                                        while ($row = odbc_fetch_array($result)) {
-                                        $id=$row['thread_Id'];    
-                                        $title=$row['item_title'];
-                                        $price=$row['price'];
-                                        $img_url=$row['item_imgurl'];
-                                        $desc=$row['post_description'];
-                                        include "view_items.php";
-                                        }
-                                    }
-                                }
+                                <div class="col-sm-6 mt-5">
+                                    <div class="product" data-name="p-1">
+                                         <img src="img/art1.jpg" alt="">
+                                        <h3>Oil Painting</h3>
+                                        <div class="price">$2.00</div>
+                                        <li><a href=""><i class="fa-brands fa-facebook"></i></a> John Doe</li>
+                                        <li><a href=""><i class="fa-brands fa-instagram-square"></i></a> John Doe</li>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 mt-5">
+                                    <div class="product" data-name="p-1">
+                                         <img src="img/art1.jpg" alt="">
+                                        <h3>Oil Painting</h3>
+                                        <div class="price">$2.00</div>
+                                        <li><a href=""><i class="fa-brands fa-facebook"></i></a> John Doe</li>
+                                        <li><a href=""><i class="fa-brands fa-instagram-square"></i></a> John Doe</li>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 mt-5">
+                                    <div class="product" data-name="p-1">
+                                         <img src="img/art1.jpg" alt="">
+                                        <h3>Oil Painting</h3>
+                                        <div class="price">$2.00</div>
+                                        <li><a href=""><i class="fa-brands fa-facebook"></i></a> John Doe</li>
+                                        <li><a href=""><i class="fa-brands fa-instagram-square"></i></a> John Doe</li>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 mt-5">
+                                    <div class="product" data-name="p-1">
+                                         <img src="img/art1.jpg" alt="">
+                                        <h3>Oil Painting</h3>
+                                        <div class="price">$2.00</div>
+                                        <li><a href=""><i class="fa-brands fa-facebook"></i></a> John Doe</li>
+                                        <li><a href=""><i class="fa-brands fa-instagram-square"></i></a> John Doe</li>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 mt-5">
+                                    <div class="product" data-name="p-1">
+                                         <img src="img/art1.jpg" alt="">
+                                        <h3>Oil Painting</h3>
+                                        <div class="price">$2.00</div>
+                                        <li><a href=""><i class="fa-brands fa-facebook"></i></a> John Doe</li>
+                                        <li><a href=""><i class="fa-brands fa-instagram-square"></i></a> John Doe</li>
+                                    </div>
+                                </div>
                                 
-                                    
-                                    
-                            }
-                                ?>
+                                
+                                
                             </div>
                         </div>
-                        <div class="products-preview">
-                        <?php
-                            include 'dbcon.php';
-                            if(!$con){
-                                header("Location: Ghost.html");
-                            }
-                            else{
-                                $query = "SELECT*FROM art_submission WHERE post_type='Sale'";
-                                $result = odbc_exec($con,$query);
-                                        
-                                        
-                                if (!empty($result)) {
-                                    while ($row = odbc_fetch_array($result)) {
-                                    $id=$row['thread_Id'];    
-                                    $title=$row['item_title'];
-                                    $price=$row['price'];
-                                    $img_url=$row['item_imgurl'];
-                                    $desc=$row['post_description'];
-                                    include "view_itemsdetails.php";
-                                    }
 
-                                    }
-                                     
-                                }
-                                ?>
-                        
-                        </div>
+
+
                     </div>
 
+                    <div class="products-preview">
 
+                        <div class="preview" data-target="p-1">
+                            <i class="fas fa-times"></i>
+                            <img src="img/art1.jpg" alt="">
+                            <h3>Oil Painting</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>( 250 )</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+                            <div class="price">$2.00</div>
+                            <div class="buttons">
+                                <a href="#" class="description">Go to Description Page</a>
+                            </div>
+                        </div>
+
+
+                    </div>
                 </div>
 
             </div>
@@ -225,16 +161,13 @@
     </div>
 
 </body>
-
 <script type="text/javascript">
     let preveiwContainer = document.querySelector('.products-preview');
     let previewBox = preveiwContainer.querySelectorAll('.preview');
-  
-    console.log(previewBox.length);
+
     document.querySelectorAll('.products-container .product').forEach(product => {
         product.onclick = () => {
             preveiwContainer.style.display = 'flex';
-            
             let name = product.getAttribute('data-name');
             previewBox.forEach(preview => {
                 let target = preview.getAttribute('data-target');
