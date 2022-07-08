@@ -40,19 +40,107 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><button onclick="togglePopup()" class="first-button">LOGIN</button></li>
+                <li><button onclick="togglePopup()" class="first-button" style="color: black;">LOGIN</button></li>
                 <div class="popup" id="popup-1">
-                <form action="login.php">
-                    <div class="content">
-                     <div class="close-btn" onclick="togglePopup()" style="cursor: pointer;"><img src="img/close.png" alt=""></div> 
-                 <h1 class="login-modal">LOGIN</h1> 
-                   <div class="input-field"><input placeholder="Email" class="validate"></div>
-                   <div class="input-field"><input type="password" placeholder="Password" class="validate"></div>
-                     <button class="second-button">Login</button>
-                     <p>Don't have an account? <a href="">Sign Up</a></p>
-                    </div>
-                   </div>
-                </form>
+                    <form action="login.php">
+                        <div class="content">
+                                <div class="close-btn" onclick="togglePopup()" style="cursor: pointer;"><img src="img/close.png" alt=""></div> 
+                            <h1 class="login-modal">LOGIN</h1> 
+                            <div class="input-field"><input placeholder="Email" class="validate"></div>
+                            <div class="input-field"><input type="password" placeholder="Password" class="validate"></div>
+                                <button class="second-button">Login</button>
+                                <p>Don't have an account? <button onclick="myFunction()">Sign Up</button></p>   
+                        </div>             
+                     </form>
+                </div>
+
+                <div class="sipopup" id="sipopup-1">
+                    <form action="sign.php">
+                        <div class="content">
+                            <div class="close-btn" onclick="myFunction()" style="cursor: pointer;"><img src="img/close.png" alt=""></div>
+
+                            <h1 class="signup-modal">SIGN UP</h1> 
+                            
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-sm-6 mb-3">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="col-md-12 mb-3">
+                                                    <label for="validationDefault01">Email address</label>
+                                                    <input type="text" class="form-control" id="validationDefault01" placeholder="juandelacruz@hotmail.com"required>
+                                                </div>
+
+                                                <div class="col-md-12 mb-3">
+                                                    <label for="validationDefaultUsername">Username</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                                        </div>
+                                                        <input type="text" class="form-control" id="validationDefaultUsername" placeholder="juandc" aria-describedby="inputGroupPrepend3" required>    
+                                                    </div>    
+                                                </div>
+
+                                                <div class="col-md-12 mb-3">
+                                                    <label for="validationDefault02">Password</label>
+                                                    <input type="text" class="form-control" id="validationDefault02" required> 
+                                                </div>
+
+                                                <div class="col-md-12 mb-3">
+                                                    <label for="validationDefault03"> Confirm Password</label>
+                                                    <input type="text" class="form-control" id="validationDefault03" required> 
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 mb-3">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validationDefault04">First Name</label>
+                                                        <input type="text" class="form-control" id="validationDefault04" placeholder="Juan Miguel"  required> 
+                                                    </div>
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validationDefault05"> Middle Name</label>
+                                                        <input type="text" class="form-control" id="validationDefault05" placeholder="Luna"  required> 
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validationDefault06">Last Name</label>
+                                                        <input type="text" class="form-control" id="validationDefault06" placeholder="Dela Cruz"  required> 
+                                                    </div>
+
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validationDefault07"> Name Ext.</label>
+                                                        <input type="text" class="form-control" id="validationDefault07" placeholder="jr."> 
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-12 mb-3">
+                                                        <label for="validationDefault08">Address</label>
+                                                        <input type="text" class="form-control" id="validationDefault08" placeholder="Malolos, Bulacan"  required> 
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-12 mb-3">
+                                                        <label for="bday">Date of Birth:</label>
+                                                        <input type="date" class="form-control" id="form_input" name="bday"required>
+                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="signup-button">Sign Up</button>  
+                            </form>
+                        </div>
+                    </form>
+                </div>
             </ul>
         </div>
     </header>
