@@ -201,6 +201,7 @@
   border-radius: 50px;
   border: 2px solid #fff;
   transition: all 0.3s ease;
+  margin-top: 0%;
 }
 .items span.active,
 .items span:hover{
