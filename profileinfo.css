@@ -1,5 +1,5 @@
 *{
-    font-family: montserrat;
+    font-family: montserrat, sans-serif;
 }
 .card{
     border: #000;
@@ -10,7 +10,7 @@
     color: #fff;
 }
 .container-fluid{
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 .font{
     font-size: 15px;
