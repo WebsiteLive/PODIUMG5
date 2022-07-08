@@ -1,0 +1,166 @@
+li{
+    list-style-type: none;
+}
+.main-menu .navbar-brand{
+    padding-top: 0rem;
+    padding-bottom: 0px;
+}
+.main-menu .navbar{
+    padding: 0px;
+}
+.main-menu .main-menu-item ul li .nav-link{
+    color: #000;
+    font-size: 15px;
+    padding: 35px 25px;
+    text-transform: capitalize;
+    line-height: 12px;
+    font-weight: 400;
+
+}
+.main-menu .main-menu-item ul li .nav-link:hover{
+    color: #000;
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .main-menu .main-menu-item ul li .nav-link{
+        padding: 35px 20px;
+    }
+}
+.main-menu .cart i{
+    color: #000;
+    position: relative;
+    z-index: 1;
+    font-size: 15px;
+}
+.main-menu .cart i:after{
+    position: absolute;
+    border-radius: 50%;
+    background: #7e7a7a;
+    width: 14px;
+    height: 14px;
+    right: -8px;
+    top: -8px;
+    content: "5";
+    text-align: center;
+    line-height: 15px;
+    font-size: 10px;
+    color: #fff;
+}
+.dropdown .dropdown-menu{
+    transition: all 0.5s;
+    overflow: hidden;
+    transform-origin: top center;
+    transform: scale(1, 0);
+    display: block;
+    border: 0px solid transparent;
+    background: #000;
+}
+.dropdown .dropdown-menu .dropdown-item{
+    font-size: 14px;
+    padding:8px 20px !important;
+    color: #fff;
+    background: #000;
+    text-transform: capitalize;
+}
+.dropdown:hover .dropdown-menu{
+    transform: scale(1);
+}
+@media (max-width: 991px){
+    .main-menu{
+        padding: 26px 0px;
+    }
+    .menu .main-menu-item{
+        padding-left: 0px;
+    }
+    .main-menu .main-menu-item .nav-item{
+        padding: 5px 15px im !important;
+    }
+    .main-menu .main-menu-item .nav-item .nav-link{
+        padding: 5px 15px!important;
+        color: #614538;
+    }
+    .navbar-collapse{
+        z-index: 999!important;
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        background: #614538;
+        text-align: center!important;
+    }
+    .dropdown .dropdown-menu{
+        transform: scale(1,0);
+        display: none;
+        margin-top: 10px;
+    }
+    .navbar-brand img{
+        max-width: 20px;
+        margin: 20 auto;
+        position: absolute;
+        left:100;
+        right: 100;
+        display: inline-block;
+        top: 100px;
+        bottom: 100px;
+    }
+    .navbar-light .navbar-toggler{
+        border-color: transparent;
+        position: absolute;
+        left:0;
+    }
+    .nav-icon i{
+        color: #000;
+    }
+    .main-menu a i{
+        margin-left:13px;
+    }
+}
+@media (max-width: 576px){
+    .main-menu{
+        padding: 20px 0px;
+    }
+}
+@media only screen and(min-width: 576px) and (max-width: 767px){
+    .main-menu{
+        padding: 20px 0px
+    }
+}
+.main-menu-item{
+    justify-content: center!important;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
