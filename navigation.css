@@ -164,3 +164,7 @@ li{
   text-decoration: none;
   cursor: pointer;
 }
+
+.row{
+    margin-top: 25px;
+}
