@@ -67,7 +67,7 @@
                             <div class="input-field"><input placeholder="Email" class="validate" name="email" required></div>
                             <div class="input-field"><input type="password" placeholder="Password" class="validate" name="password" required></div>
                                 <button class="second-button">Login</button>
-                                <p>Don't have an account? <a onclick="myFunction()">Sign Up</a></p>   
+                                <p>Don't have an account? <a onclick="myFunction()" style="color: white;">Sign Up</a></p>   
                         </div>             
                      </form>
                 </div>
@@ -154,7 +154,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <input type="submit" class="signup-button" value="SIGNUP"> 
+                                <input type="submit" class="signup-button" value="SIGN UP"> 
                             </form>
                         </div>
                     </form>
