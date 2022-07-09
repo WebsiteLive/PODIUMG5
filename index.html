@@ -51,29 +51,29 @@
                                     <p><?php echo $_GET['em']?></P>
                                     <?php endif?>
                         -->
-                            <div class="input-field"><input placeholder="Email" class="validate"></div>
-                            <div class="input-field"><input type="password" placeholder="Password" class="validate"></div>
+                            <div class="input-field"><input placeholder="Email" class="validate" name="email" required></div>
+                            <div class="input-field"><input type="password" placeholder="Password" class="validate" name="password" required></div>
                                 <button class="second-button">Login</button>
-                                <p>Don't have an account? <button onclick="myFunction()">Sign Up</button></p>   
+                                <p>Don't have an account? <a onclick="myFunction()">Sign Up</a></p>   
                         </div>             
                      </form>
                 </div>
 
                 <div class="sipopup" id="sipopup-1">
-                    <form action="sign.php">
+                    <form action="">
                         <div class="content">
                             <div class="close-btn" onclick="myFunction()" style="cursor: pointer;"><img src="img/close.png" alt=""></div>
 
                             <h1 class="signup-modal">SIGN UP</h1> 
                             
-                            <form>
+                            <form action="signup.php" method="post">
                                 <div class="form-row">
                                     <div class="col-sm-6 mb-3">
                                         <div class="card-signup">
                                             <div class="card-body">
                                                 <div class="col-md-12 mb-3">
-                                                    <label for="validationDefault01">Email address</label>
-                                                    <input type="text" class="form-control" id="validationDefault01" placeholder="juandelacruz@hotmail.com"required>
+                                                    <label for="email">Email address</label>
+                                                    <input name="email"type="text" class="form-control" id="validationDefault01" placeholder="juandelacruz@hotmail.com"required>
                                                 </div>
 
                                                 <div class="col-md-12 mb-3">
@@ -88,12 +88,12 @@
 
                                                 <div class="col-md-12 mb-3">
                                                     <label for="validationDefault02">Password</label>
-                                                    <input type="text" class="form-control" id="validationDefault02" required> 
+                                                    <input type="password" class="form-control" id="validationDefault02" required> 
                                                 </div>
 
                                                 <div class="col-md-12 mb-3">
                                                     <label for="validationDefault03"> Confirm Password</label>
-                                                    <input type="text" class="form-control" id="validationDefault03" required> 
+                                                    <input type="password" class="form-control" id="validationDefault03" required> 
                                                 </div>
 
                                             </div>
@@ -141,7 +141,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="signup-button">Sign Up</button>  
+                                <input type="submit" class="signup-button" value="SIGNUP"> 
                             </form>
                         </div>
                     </form>

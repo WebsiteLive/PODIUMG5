@@ -40,7 +40,7 @@
                 echo"BOBO MALI";
             }
         }
-        pe;
+        
     }
     
 ?>
