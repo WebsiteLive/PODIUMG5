@@ -1,5 +1,12 @@
 <?php
    session_start();
+
+  
+    $type=$_GET['type'];
+  
+    
+    
+
 ?>
 <!DOCTYPE html>
 <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->

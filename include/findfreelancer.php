@@ -8,11 +8,42 @@
   
         <div class="products-container">
   
-           <div class="product" data-name="p-1">
-              <img src="image/Painting.jpg" alt="">
-              <h3>Mona Lisa</h3>
-              <div class="price">$2.00</div>
-           </div>
+           <?php
+            if(!$con){
+            header("Location: Ghost.html");
+            }
+            else{
+
+               if(isset($_GET['type'])){
+                  $type=$_GET['type'];
+                
+                  if($type == "Digital"){
+                     $query = "SELECT*FROM art_submission WHERE post_type='Sale'AND item_type='Digital Art'";
+                     $result = odbc_exec($con,$query);
+                  }
+
+               }
+               else{
+                  $query = "SELECT*FROM art_submission WHERE post_type='Sale'";
+                  $result = odbc_exec($con,$query);
+             
+                  if(!empty($result)) {
+                      while ($row = odbc_fetch_array($result)) {
+                      $id=$row['thread_Id'];    
+                      $title=$row['item_title'];
+                      $price=$row['price'];
+                      $img_url=$row['item_imgurl'];
+                      $desc=$row['post_description'];
+                      include 'items.html';
+                      
+                     }
+                  }
+
+               }
+            }
+               
+               
+           ?>
   
         </div>
   
