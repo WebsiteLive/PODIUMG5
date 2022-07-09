@@ -476,6 +476,11 @@ header .navbar ul li a:hover{
   align-items: center;
 }
 
+#result{
+    float: right;
+    margin-top: -2rem;
+}
+
 .wrapper .form .inputfield label{
    width: 200px;
    color: #000;
@@ -632,7 +637,7 @@ ul {
 .radio-section{
     display: flex;
     justify-content: center;
-    padding-left: 4.7rem;
+    padding-left: 3rem;
     padding-bottom: 1rem;
 }
 .radio-item [type="radio"]{
@@ -706,7 +711,7 @@ ul {
     border-radius: 5px;
     outline: none;
     text-align: center;
-    margin-left: 4.5rem;
+    margin-left: 6rem;
     margin-bottom: 1rem;
 }
 

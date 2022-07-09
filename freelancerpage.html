@@ -137,8 +137,8 @@
                      <div class="form">
                          <div class="inputfield">
                            <label>Type</label>
-                           <div class="custom_select">
-                             <select>
+                           <div class="custom_select" required>
+                             <select required>
                                <option value="">Select</option>
                                <option value="male">Drawing</option>
                                <option value="female">Painting</option>
@@ -148,20 +148,21 @@
                         </div> 
                          <div class="inputfield">
                            <label>Title</label>
-                           <input type="text" class="input">
+                           <input type="text" class="input" required>
                         </div> 
                        <div class="inputfield">
                            <label>Dimension</label>
-                           <input type="text" class="input">
+                           <input type="text" class="input" required>
                         </div> 
                        <div class="inputfield">
-                           <label>Description</label>
-                           <textarea class="textarea"></textarea>
-                        </div> 
+                        <label>Description</label>
+                        <textarea id="my-text" rows="5" class="textarea" required></textarea>
+                        </div>
+                        <p id="result"></p>
+                        <br>
 
-
-                        <center><input type="file" class="upload-box"></center>
-                        <div class="radio-section">
+                        <center><input type="file" class="upload-box" required></center>
+                        <div class="radio-section" required>
 
                            <div class="radio-list">
                                <div class="radio-item">
@@ -177,11 +178,11 @@
                         </div>
                        <div class="inputfield">
                            <label>Price</label>
-                           <input type="number" class="input" placeholder="₱">
+                           <input type="number" class="input" placeholder="₱" required>
                         </div> 
                        <div class="inputfield terms">
                            <label class="check">
-                             <input type="checkbox">
+                             <input type="checkbox" required>
                              <span class="checkmark"></span>
                            </label>
                            <p>Agreed to terms and conditions</p>
@@ -194,24 +195,6 @@
                </form>
             </div> 
          </div> 
-                 <!--  <input type="file" name="imgfile" required>
-                   <label>Dimension</label>
-                   <input type="text" name="dimension">
-    
-                   <h3 style="font-size: 20px;">Choose For Sale or For Commission</h3>
-                   <input type="radio" id="Sale" name="post_type" value="Sale" onchange="rdbtnchange()">
-                   <label for="Sale">For Sale</label><br>
-                   <input type="radio" id="Commission" name="post_type" value="Commision" onchange="rdbtnchange()">
-                   <label for="Commission">For Commission</label><br><br>
-    
-                   <div class="forcommision" id="forcommision">
-                      <label>Caption</label><br>
-                      <input type="textarea" name="caption" placeholder="Insert your tagline..." ><br><br>
-                   </div>
-                   <div class="buttons">
-                      <input type="submit" class="buy" value="submit" name="submit"></input>
-                   </div>
-                   -->
                 <script>
                     function rdbtnchange(){
                        let rdvalue = document.querySelectorAll("input[name='post_type']:checked")[0].value;
