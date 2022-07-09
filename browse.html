@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+    <link rel="stylesheet" href="css/browse.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="fontawesome/css/all.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <img src="image/Podium.png" alt="" class="icon">
+        <div class="logo_name"><a href="" style="color: white;">&nbsp; &nbsp;PODIUM</a></div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="browse.html">
+            <i class="fa-solid fa-house"></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      <li>
+       <a href="#">
+         <i class="fa-solid fa-user-pen"></i>
+         <span class="links_name">Account</span>
+       </a>
+       <span class="tooltip">Account</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class="fa-solid fa-magnifying-glass"></i>
+         <span class="links_name">Find an Artist</span>
+       </a>
+       <span class="tooltip">Find an Artist</span>
+     </li>
+     <li>
+        <a href="#">
+            <i class="fa-solid fa-user-tie"></i>
+          <span class="links_name">Be a Freelancer</span>
+        </a>
+        <span class="tooltip">Be a Freelancer</span>
+      </li>
+     <li>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="logo-details">
+              <div class="logo_name" style="padding-left: 2.5rem;"> CATEGORIES</div>
+          </div>
+       <a href="#">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">All Items</span>
+       </a>
+       <span class="tooltip">All Items</span>
+     </li>
+     <li>
+       <a href="#">
+        <i class="fa-solid fa-pencil"></i>
+         <span class="links_name">Drawing</span>
+       </a>
+       <span class="tooltip">Pencil</span>
+     </li>
+     <li>
+       <a href="#">
+        <i class="fa-solid fa-paintbrush"></i>
+         <span class="links_name">Painting</span>
+       </a>
+       <span class="tooltip">Painting</span>
+     </li>
+     <li>
+       <a href="#">
+        <i class="fa-solid fa-palette"></i>
+         <span class="links_name">Digital Arts</span>
+       </a>
+       <span class="tooltip">Digital Arts</span>
+     </li>
+     <li class="profile">
+        <a href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logout</a>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+      <div class="container">
+
+        <h3 class="title">GALLERY MARKET PAGE</h3>
+  
+        <div class="products-container">
+  
+           <div class="product" data-name="p-1">
+              <img src="image/Painting.jpg" alt="">
+              <h3>Mona Lisa</h3>
+              <div class="price">$2.00</div>
+           </div>
+  
+           <div class="product" data-name="p-2">
+              <img src="image/Painting1.jpg" alt="">
+              <h3>The Last Supper</h3>
+              <div class="price">$2.00</div>
+           </div>
+  
+           <div class="product" data-name="p-3">
+              <img src="image/Painting2.jpg" alt="">
+              <h3>The Starry Night</h3>
+              <div class="price">$2.00</div>
+           </div>
+  
+           <div class="product" data-name="p-4">
+              <img src="image/Painting3.jpg" alt="">
+              <h3>The Scream</h3>
+              <div class="price">$2.00</div>
+           </div>
+  
+           <div class="product" data-name="p-5">
+              <img src="image/Painting4.jpg" alt="">
+              <h3>Guernica</h3>
+              <div class="price">$2.00</div>
+           </div>
+  
+           <div class="product" data-name="p-6">
+              <img src="image/Painting5.jpg" alt="">
+              <h3>The Kiss</h3>
+              <div class="price">$2.00</div>
+           </div>
+  
+        </div>
+  
+     </div>
+  
+     <div class="products-preview">
+  
+        <div class="preview" data-target="p-1">
+           <i class="fas fa-times"></i>
+           <img src="image/Painting.jpg" alt="">
+           <h3>Mona Lisa</h3>
+           <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+           </div>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+           <div class="price">$2.00</div>
+           <center>           
+            <div class="buttons">
+              <a href="" class="description">Go to Description Page</a>
+           </div>
+        </center>
+
+        </div>
+  
+        <div class="preview" data-target="p-2">
+           <i class="fas fa-times"></i>
+           <img src="image/Painting1.jpg" alt="">
+           <h3>The Last Supper</h3>
+           <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+           </div>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+           <div class="price">$2.00</div>
+           <center>           
+            <div class="buttons">
+              <a href="" class="description">Go to Description Page</a>
+           </div>
+        </center>
+        </div>
+  
+        <div class="preview" data-target="p-3">
+           <i class="fas fa-times"></i>
+           <img src="image/Painting2.jpg" alt="">
+           <h3>The Starry Night</h3>
+           <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+           </div>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+           <div class="price">$2.00</div>
+           <center>           
+            <div class="buttons">
+              <a href="" class="description">Go to Description Page</a>
+           </div>
+        </center>
+        </div>
+  
+        <div class="preview" data-target="p-4">
+           <i class="fas fa-times"></i>
+           <img src="image/Painting3.jpg" alt="">
+           <h3>The Screaml</h3>
+           <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+           </div>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+           <div class="price">$2.00</div>
+           <center>           
+            <div class="buttons">
+              <a href="" class="description">Go to Description Page</a>
+           </div>
+        </center>
+        </div>
+  
+        <div class="preview" data-target="p-5">
+           <i class="fas fa-times"></i>
+           <img src="image/Painting4.jpg" alt="">
+           <h3>Guernica</h3>
+           <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+           </div>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+           <div class="price">$2.00</div>
+           <center>           
+            <div class="buttons">
+              <a href="" class="description">Go to Description Page</a>
+           </div>
+        </center>
+        </div>
+  
+        <div class="preview" data-target="p-6">
+           <i class="fas fa-times"></i>
+           <img src="image/Painting5.jpg" alt="">
+           <h3>The Kiss</h3>
+           <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+           </div>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+           <div class="price">$2.00</div>
+           <center>           
+            <div class="buttons">
+              <a href="" class="description">Go to Description Page</a>
+           </div>
+        </center>
+        </div>
+  
+     </div>
+
+
+  </section>
+  <script src="js/browse.js" defer></script>
+  <script type="text/javascript">
+   let sidebar = document.querySelector(".sidebar");
+   let closeBtn = document.querySelector("#btn");
+   let searchBtn = document.querySelector(".bx-search");
+ 
+   closeBtn.addEventListener("click", ()=>{
+     sidebar.classList.toggle("open");
+     menuBtnChange();//calling the function(optional)
+   });
+ 
+   searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+     sidebar.classList.toggle("open");
+     menuBtnChange(); //calling the function(optional)
+   });
+ 
+   // following are the code to change sidebar button(optional)
+   function menuBtnChange() {
+    if(sidebar.classList.contains("open")){
+      closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+    }else {
+      closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+    }
+   }
+  </script>
+</body>
+</html>
