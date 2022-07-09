@@ -169,12 +169,12 @@
 
                            <div class="radio-list">
                                <div class="radio-item">
-                                   <input type="radio" name="radio" id="radio1">
+                                   <input type="radio" name="radio" id="radio1" value="Commision">
                                  
                                    <label for="radio1">For Commission</label>
                                </div>
                                <div class="radio-item">
-                                   <input type="radio" name="radio" id="radio2">
+                                   <input type="radio" name="radio" id="radio2" value="Commision">
                                    <label for="radio2">For Sale</label>
                                </div>
                            </div>
@@ -200,7 +200,7 @@
          </div> 
                 <script>
                     function rdbtnchange(){
-                       let rdvalue = document.querySelectorAll("input[name='post_type']:checked")[0].value;
+                       let rdvalue = document.querySelectorAll("input[name='radio']:checked")[0].value;
                        console.log(rdvalue);
      
                        if(rdvalue == "Sale"){
