@@ -141,48 +141,54 @@
                          <div class="inputfield">
                            <label>Type</label>
                            <div class="custom_select" required>
-                             <select required>
-                               <option value="">Select</option>
-                               <option value="male">Drawing</option>
-                               <option value="female">Painting</option>
-                               <option value="female">Digital Art</option>
+                             <select name="item_type" required>
+                               <option value="" disable selected>Select</option>
+                               <option value="Drawing">Drawing</option>
+                               <option value="Painting">Painting</option>
+                               <option value="Digital Art">Digital Art</option>
                              </select>
                            </div>
                         </div> 
                          <div class="inputfield">
                            <label>Title</label>
-                           <input type="text" class="input" required>
+                           <input type="text" class="input" name="title"required>
                         </div> 
                        <div class="inputfield">
                            <label>Dimension</label>
-                           <input type="text" class="input" required>
+                           <input type="text" class="input" name="dimension" required>
                         </div> 
-                       <div class="inputfield">
+                       <div class="inputfield" id="forsale">
                         <label>Description</label>
-                        <textarea id="my-text" rows="5" class="textarea" required></textarea>
+                        <textarea id="my-text" rows="5" class="textarea" name="desc" ></textarea>
+                        <p id="result"></p>
+                        <label>Price</label>
+                           <input type="number" class="input" placeholder="₱" name="Price">
+                        </div>
+                        
+
+                        <div class="inputfield" id="forcommision">
+                        <label>Caption</label>
+                        <textarea id="my-text" rows="5" class="textarea" name="Caption"></textarea>
+                        
                         </div>
                         <p id="result"></p>
                         <br>
 
-                        <center><input type="file" class="upload-box" required></center>
+                        <center><input type="file" class="upload-box" name="imgfile"required></center>
                         <div class="radio-section" required>
 
                            <div class="radio-list">
                                <div class="radio-item">
-                                   <input type="radio" name="radio" id="radio1" value="Commision">
+                                   <input type="radio" name="radio" id="radio1" value="Commision" onchange="rdbtnchange()">
                                  
                                    <label for="radio1">For Commission</label>
                                </div>
                                <div class="radio-item">
-                                   <input type="radio" name="radio" id="radio2" value="Commision">
+                                   <input type="radio" name="radio" id="radio2" value="Sale" onchange="rdbtnchange()">
                                    <label for="radio2">For Sale</label>
                                </div>
                            </div>
                         </div>
-                       <div class="inputfield">
-                           <label>Price</label>
-                           <input type="number" class="input" placeholder="₱" required>
-                        </div> 
                        <div class="inputfield terms">
                            <label class="check">
                              <input type="checkbox" required>
@@ -208,8 +214,9 @@
                           document.getElementById("forcommision").style.display="none";
                        }
                        else if(rdvalue == "Commision"){
+                           document.getElementById("forsale").style.display="none";
                           document.getElementById("forcommision").style.display="block";
-                          document.getElementById("forsale").style.display="none";
+                          
                        }
                     }
                  </script>

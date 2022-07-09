@@ -56,14 +56,13 @@
        </a>
        <span class="tooltip">Find an Artist</span>
      </li>
-     <li>
-        <a href="#">
-            <i class="fa-solid fa-user-tie"></i>
-          <span class="links_name">Be a Freelancer</span>
-        </a>
-        <span class="tooltip">Be a Freelancer</span>
-      </li>
-     <li>
+   <li>
+              <a href="#">
+                  <i class="fa-solid fa-user-tie"></i>
+                <span class="links_name">Be a Freelancer</span>
+              </a>
+              <span class="tooltip">Be a Freelancer</span>
+            </li>
         <br>
         <br>
         <br>
@@ -71,28 +70,28 @@
         <div class="logo-details">
               <div class="logo_name" style="padding-left: 2.5rem;"> CATEGORIES</div>
           </div>
-       <a href="browse.php">
+       <a href="browse.php?view=<?php if (isset($_GET['view'])){echo $_GET['view'];} else{ echo "Market";}?>">
          <i class='bx bx-folder' ></i>
          <span class="links_name">All Items</span>
        </a>
        <span class="tooltip">All Items</span>
      </li>
      <li>
-       <a href="browse.php?view=<?php if (isset($_GET['view'])){echo $_GET['view'];}?>&type=Draw">
+       <a href="browse.php?view=<?php if (isset($_GET['view'])){echo $_GET['view'];}?>&type=Drawing">
         <i class="fa-solid fa-pencil"></i>
          <span class="links_name">Drawing</span>
        </a>
        <span class="tooltip">Pencil</span>
      </li>
      <li>
-       <a href="#">
+       <a href="browse.php?view=<?php if (isset($_GET['view'])){echo $_GET['view'];} else{ echo "Market";}?>&type=Painting">
         <i class="fa-solid fa-paintbrush"></i>
          <span class="links_name">Painting</span>
        </a>
        <span class="tooltip">Painting</span>
      </li>
      <li>
-       <a href="#">
+       <a href="browse.php?view=<?php if (isset($_GET['view'])){echo $_GET['view'];} else{ echo "Market";}?>&type=Digital Art">
         <i class="fa-solid fa-palette"></i>
          <span class="links_name">Digital Arts</span>
        </a>
@@ -114,8 +113,6 @@
       echo $view;
       
     }
-
-   
 
    ?>
 
