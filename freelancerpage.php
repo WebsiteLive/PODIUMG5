@@ -157,9 +157,18 @@
                            <label>Dimension</label>
                            <input type="text" class="input" required>
                         </div> 
-                       <div class="inputfield">
+                       <div class="inputfield" id="forsale">
                         <label>Description</label>
                         <textarea id="my-text" rows="5" class="textarea" required></textarea>
+                        <label>Price</label>
+                           <input type="number" class="input" placeholder="₱" required>
+                        </div>
+                        <p id="result"></p>
+
+                        <div class="inputfield" id="forcommision">
+                        <label>Caption</label>
+                        <textarea id="my-text" rows="5" class="textarea" required></textarea>
+                        
                         </div>
                         <p id="result"></p>
                         <br>
@@ -169,20 +178,21 @@
 
                            <div class="radio-list">
                                <div class="radio-item">
-                                   <input type="radio" name="radio" id="radio1" value="Commision">
+                                   <input type="radio" name="radio" id="radio1" value="Commision" onchange="rdbtnchange()">
                                  
                                    <label for="radio1">For Commission</label>
                                </div>
                                <div class="radio-item">
-                                   <input type="radio" name="radio" id="radio2" value="Commision">
+                                   <input type="radio" name="radio" id="radio2" value="Sale" onchange="rdbtnchange()">
                                    <label for="radio2">For Sale</label>
                                </div>
                            </div>
                         </div>
-                       <div class="inputfield">
+                       <div class="inputfield" id="forsale">
                            <label>Price</label>
                            <input type="number" class="input" placeholder="₱" required>
                         </div> 
+                  
                        <div class="inputfield terms">
                            <label class="check">
                              <input type="checkbox" required>
@@ -208,8 +218,9 @@
                           document.getElementById("forcommision").style.display="none";
                        }
                        else if(rdvalue == "Commision"){
+                           document.getElementById("forsale").style.display="none";
                           document.getElementById("forcommision").style.display="block";
-                          document.getElementById("forsale").style.display="none";
+                          
                        }
                     }
                  </script>

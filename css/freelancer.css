@@ -37,6 +37,12 @@ section{
     border-bottom: .1rem solid #65453A;
     color: #fff;
 }
+#forsale{
+    display: none;
+}
+#forcommision{
+    display: none;
+}
 
 .heading span{
     color: #65453A;
