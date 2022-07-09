@@ -34,7 +34,7 @@
                       $price=$row['price'];
                       $img_url=$row['item_imgurl'];
                       $desc=$row['post_description'];
-                      include 'items.html';
+                      include 'items.php';
                       
                      }
                   }
