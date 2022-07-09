@@ -43,7 +43,15 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><button onclick="togglePopup()" class="first-button" style="color: black;">LOGIN</button></li>
+                <?php 
+                    if(isset($_SESSION['User_Id'])){
+                        echo '<li><a href="browse.php">Browse</a></li>';
+                    }
+                    else{
+                        echo '<li><button onclick="togglePopup()" class="first-button" style="color: black;">LOGIN</button></li>';
+                    }
+                ?>
+                
                 <div class="popup" id="popup-1">
                     <form action="login.php" method="post">
                         <div class="content">

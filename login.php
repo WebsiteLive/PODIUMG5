@@ -13,8 +13,6 @@
     
     
     if (odbc_num_rows($result) == 0) {
-
-       
         $em="Email does Not Exist";
         header("Location:index.php?em=$em");
     }
@@ -31,12 +29,13 @@
                 $_SESSION['user_type']=$row2['user_type'];
                 $type=$_SESSION['user_type'];
 
-                header("Location:gallerymarketpage_new.php");
+                header("Location: browse.php");
                 }
                 
             }
             else{
-                echo"BOBO MALI";
+                $em="Incorrect Password";
+                header("Location:index.php?em=$em");
             }
         }
         
