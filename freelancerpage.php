@@ -140,7 +140,7 @@
                      <div class="form">
                          <div class="inputfield">
                            <label>Type</label>
-                           <div class="custom_select" required>
+                           <div class="custom_select" name="item_type"required>
                              <select required>
                                <option value="">Select</option>
                                <option value="male">Drawing</option>
@@ -151,24 +151,24 @@
                         </div> 
                          <div class="inputfield">
                            <label>Title</label>
-                           <input type="text" class="input" required>
+                           <input type="text" class="input" name="title"required>
                         </div> 
                        <div class="inputfield">
                            <label>Dimension</label>
-                           <input type="text" class="input" required>
+                           <input type="text" class="input" name="dimension" required>
                         </div> 
                        <div class="inputfield" id="forsale">
                         <label>Description</label>
-                        <textarea id="my-text" rows="5" class="textarea" required></textarea>
+                        <textarea id="my-text" rows="5" class="textarea" name="desc" required></textarea>
                         <p id="result"></p>
                         <label>Price</label>
-                           <input type="number" class="input" placeholder="₱" required>
+                           <input type="number" class="input" placeholder="₱" name="Price"required>
                         </div>
                         
 
                         <div class="inputfield" id="forcommision">
                         <label>Caption</label>
-                        <textarea id="my-text" rows="5" class="textarea" required></textarea>
+                        <textarea id="my-text" rows="5" class="textarea" name="Caption"required></textarea>
                         
                         </div>
                         <p id="result"></p>
