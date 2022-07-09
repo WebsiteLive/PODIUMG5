@@ -32,7 +32,7 @@
                 
 
                 <!--FORM-->
-                <form action="" method="post">
+                <form action="profile.php" method="post">
                     <div class="form-row" style="padding-left: 3rem;">
                         
                     </div>
