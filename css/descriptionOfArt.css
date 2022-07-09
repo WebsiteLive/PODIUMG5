@@ -1,0 +1,117 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h4{
+	font-size: 23px;
+	font-weight: 400;
+	padding-top: 5%;
+
+}
+h5{
+	font-size: 16px;
+}
+.col-sm-12{
+	font-size: 25px;
+	font-weight: 700;
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+.text{
+	justify-content: center;
+}
+strong{
+	font-size: 18px;
+	font-weight: 600;
+}
+p{
+	font-size: 14px;
+	padding-right: 10%;
+	text-align: justify;
+}
+em{
+	font-size: 14px;
+
+}
+.btn btn-lg rounded-pill{
+	padding-left: 10%;
+	padding-right:10%;
+
+}
+.btn-dark{
+	background-color: #614537;
+}
+body{
+	background-color: #FEEEE2;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+
+.img-fluid{
+	padding-left: 10%;
+	padding-bottom: 5%;
+	padding-right: 10%;
+}
+
+@media only screen and (min-width: 601px){
+	.floating-parent .widgetlabel{
+		position: relative;
+		white-space: normal;
+		border: 0px;
+		cursor: pointer;
+		border-radius: 35px;
+		padding: 5px 15px 5px 15px;
+		background-color: #614537;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		box-shadow: 0 0 50px rgb(95, 95, 95);
+		color: white;
+		text-decoration: none;
+		font-size:1vw;
+		margin-bottom:10%;
+		width: 15vw;
+		margin-left: 20%;
+		margin-top: 8%;
+		padding: auto;
+	}
+	.floating-parent .widgetlabel:hover{
+		transform: scale(1.2);
+		transition: all .2s linear;
+		background-color: #1b9a12;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.floating-parent{
+			position: fixed;
+			bottom: 7%;
+			right: 12%;
+			text-align: center;
+			color:white;
+		}
+		
+		.floating-parent .widgetlabel{
+			position: relative;
+			white-space: nowrap;
+			border: 0px;
+			cursor: pointer;
+			border-radius: 35px;
+			padding: 5px 15px 5px 15px;
+			background-color: #614537;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			box-shadow: 0 0 50px rgb(95, 95, 95);
+			color: white;
+			text-decoration: none;
+			font-size: 80%;
+		}
+		.floating-parent .widgetlabel:hover{
+			transform: scale(1.2);
+			transition: all .2s linear;
+			background-color: #1b9a12;
+		}
+	}
