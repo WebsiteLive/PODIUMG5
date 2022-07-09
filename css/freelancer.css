@@ -86,15 +86,14 @@ header .navbar ul li a{
     display: block;
     padding: 1rem;
     margin: 1.2rem 0;
-    background: #FEEEE2;
-    border: .1rem solid #D4C2B4;
-    color: #222;
+    background: #222;
+    color: #fff;
     font-size: 2rem;
     border-radius: 5rem;
     text-decoration: none;
 }
 header .navbar ul li a:hover{
-    background-color: #dfc0b6;
+    background-color: #111;
 }
 
 #menu{
@@ -189,8 +188,8 @@ header .navbar ul li a:hover{
  
  .box-container .products-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap:2rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
+    gap:5rem;
     margin:auto;
  }
  
@@ -203,7 +202,7 @@ header .navbar ul li a:hover{
     outline-offset: -1.5rem;
     cursor: pointer;
     width: 30rem;
-    height: 35rem;
+    height: 30rem;
  }
  
  .box-container .products-container .product:hover{
@@ -212,7 +211,7 @@ header .navbar ul li a:hover{
  }
  
  .box-container .products-container .product img{
-    height: 20rem;
+    height: 15rem;
     width: 26rem;
  }
  
@@ -247,22 +246,20 @@ header .navbar ul li a:hover{
     width: 100%;
     background: rgba(0,0,0,.8);
     display: none;
-    align-items: center;
     justify-content: center;
  }
  
  .products-preview .preview{
     display: none;
     padding:4rem;
-    text-align: center;
     background: #fff;
     position: relative;
     margin:2rem;
     width: 60rem;
-    height: 70rem;
+    height: 80rem;
     margin-left: 2rem;
  }
- 
+
  .products-preview .preview.active{
     display: inline-block;
  }
@@ -331,6 +328,21 @@ header .navbar ul li a:hover{
     background: #444;
     color:#fff;
  }
+
+
+.see-more{
+    background: #444;
+    color: #fff;
+    font-size: 2rem;
+    padding: 2rem;
+    border-radius: 5rem;
+}
+
+.see-more:hover{
+    background: #000;
+}
+
+
 @media(max-width: 1200px){
     html{
         font-size: 55%;
@@ -439,3 +451,274 @@ header .navbar ul li a:hover{
     }
 }
 
+
+
+/*Create Post Modal*/
+
+
+.wrapper .title{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  padding-left: 2rem;
+}
+
+.wrapper .form{
+  width: 100%;
+}
+
+.wrapper .form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield label{
+   width: 200px;
+   color: #000;
+   margin-right: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus{
+  border: 1px solid #000;
+}
+
+.wrapper .form .inputfield p{
+   font-size: 14px;
+   color: #757575;
+}
+.wrapper .form .inputfield .check{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.wrapper .form .inputfield .check .checkmark{
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  display: block;
+  position: relative;
+}
+.wrapper .form .inputfield .check .checkmark:before{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
+  background: #000;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
+  display: block;
+}
+
+.wrapper .form .inputfield .btn{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background:  #444;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover{
+  background: #000;
+}
+
+.wrapper .form .inputfield:last-child{
+  margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+  .wrapper .form .inputfield{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .form .inputfield label{
+    margin-bottom: 5px;
+  }
+  .wrapper .form .inputfield.terms{
+    flex-direction: row;
+  }
+}
+
+
+
+
+
+
+
+/**Radio Button for Create Post Modal**/
+
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+.radio-section{
+    display: flex;
+    justify-content: center;
+    padding-left: 4.7rem;
+    padding-bottom: 1rem;
+}
+.radio-item [type="radio"]{
+    display: none;
+}
+
+.radio-item + .radio-item{
+    margin-top: 15px;
+}
+.radio-item label{
+    display: block;
+    padding: 15px 50px;
+    background: #444;
+    border:2px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+    min-width: 250px;
+    white-space: nowrap;
+    position: relative;
+    color: #fff;
+}
+.radio-item label:after,
+.radio-item label:before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.radio-item label:after{
+    height: 20px;
+    width: 20px;
+    border:2px solid #000;
+    left: 20px;
+    top: calc(50% - 12px);
+}
+.radio-item label:before{
+    background: #fff;
+    height: 10px;
+    width: 10px;
+    left: 27px;
+    top: calc(50% - 5px);
+    transform: scale(5);
+    transition: .4s ease-in-out 0s;
+    opacity: 0;
+    visibility: hidden;
+}
+.radio-item [type="radio"]:checked ~ label{
+    border-color: #fff;
+}
+
+.radio-item [type="radio"]:checked ~ label:before{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+
+
+
+
+
+/**Upload Button For Create Post Modal**/
+
+
+.upload-box{
+    font-size: 15px;
+    background: #c0c0c0;
+    width: 250px;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    margin-left: 4.5rem;
+    margin-bottom: 1rem;
+}
+
+::-webkit-file-upload-button{
+    color: #fff;
+    background: #444;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+::-webkit-file-upload-button:hover{
+    background: #000;
+}

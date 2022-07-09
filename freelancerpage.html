@@ -20,8 +20,8 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#back">Back</a></li>
-            <li><a href="#log-out">Log Out</a></li>
+            <li><a href="browse.php">Back</a></li>
+            <li><a href="#log-out">Logout</a></li>
         </ul>
     </nav>
     </header>
@@ -64,6 +64,42 @@
                   <div class="artist">Camille Gudio</div>
                   <div class="price">$2.00</div>
                </div>
+               <div class="product" data-name="p-1">
+                  <img src="images/img1.jpg" alt="">
+                  <h3><i> Mona Lisa</i></h3>
+                  <div class="artist">Camille Gudio</div>
+                  <div class="price">$2.00</div>
+               </div>
+               <div class="product" data-name="p-1">
+                  <img src="images/img1.jpg" alt="">
+                  <h3><i> Mona Lisa</i></h3>
+                  <div class="artist">Camille Gudio</div>
+                  <div class="price">$2.00</div>
+               </div>
+               <div class="product" data-name="p-1">
+                  <img src="images/img1.jpg" alt="">
+                  <h3><i> Mona Lisa</i></h3>
+                  <div class="artist">Camille Gudio</div>
+                  <div class="price">$2.00</div>
+               </div>
+               <div class="product" data-name="p-1">
+                  <img src="images/img1.jpg" alt="">
+                  <h3><i> Mona Lisa</i></h3>
+                  <div class="artist">Camille Gudio</div>
+                  <div class="price">$2.00</div>
+               </div>
+               <div class="product" data-name="p-1">
+                  <img src="images/img1.jpg" alt="">
+                  <h3><i> Mona Lisa</i></h3>
+                  <div class="artist">Camille Gudio</div>
+                  <div class="price">$2.00</div>
+               </div>
+               <div class="product" data-name="p-1">
+                  <img src="images/img1.jpg" alt="">
+                  <h3><i> Mona Lisa</i></h3>
+                  <div class="artist">Camille Gudio</div>
+                  <div class="price">$2.00</div>
+               </div>
       
                <div class="product" data-name="p-2">
                   <img src="images/img2.jpg" alt="">
@@ -71,11 +107,16 @@
                   <div class="artist">Camille Gudio</div>
                   <div class="price">$2.00</div>
                </div>
-      
             </div>
-      
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <center><a href="" class="see-more">See More</a></center>
          </div>
-      
          <div class="products-preview">
       
             <div class="preview" data-target="p-1">
@@ -87,28 +128,75 @@
                <p>Dimension: 24x30</p>
                <div class="price">$2.00</div>
             </div>
-      
             <div class="preview" data-target="p-2">
                 <i class="fas fa-times"></i>
                 <form action="add_items.php" enctype="multipart/form-data" method="post" class="upload"
                    style="display: block;">
-    
-                   <input type="file" name="imgfile" required>
-                   <br>
-                   <br>
-                   <div>
-                      <p >Type</p>
-                      <br>
-                      <input type="radio" name="item_type" id="painting" value="Painting">
-                      <label for="item_type">Painting</label><br>
-                      <input type="radio" name="item_type" id="drawing" value="Drawing">
-                      <label for="item_type">Drawing</label><br>
-                      <input type="radio" name="item_type" id="digital_art" value="Digital Art">
-                      <label for="item_type">Digital Art</label><br>
-                   </div>
-                   <br>
-                   <label for="title">Title</label><br>
-                   <input name="title" type="textarea" placeholder="Title of work..." ><br><br>
+                   <div class="wrapper">
+                     <div class="title">
+                       Create Post
+                     </div>
+                     <div class="form">
+                         <div class="inputfield">
+                           <label>Type</label>
+                           <div class="custom_select">
+                             <select>
+                               <option value="">Select</option>
+                               <option value="male">Drawing</option>
+                               <option value="female">Painting</option>
+                               <option value="female">Digital Art</option>
+                             </select>
+                           </div>
+                        </div> 
+                         <div class="inputfield">
+                           <label>Title</label>
+                           <input type="text" class="input">
+                        </div> 
+                       <div class="inputfield">
+                           <label>Dimension</label>
+                           <input type="text" class="input">
+                        </div> 
+                       <div class="inputfield">
+                           <label>Description</label>
+                           <textarea class="textarea"></textarea>
+                        </div> 
+
+
+                        <center><input type="file" class="upload-box"></center>
+                        <div class="radio-section">
+
+                           <div class="radio-list">
+                               <div class="radio-item">
+                                   <input type="radio" name="radio" id="radio1">
+                                 
+                                   <label for="radio1">For Commission</label>
+                               </div>
+                               <div class="radio-item">
+                                   <input type="radio" name="radio" id="radio2">
+                                   <label for="radio2">For Sale</label>
+                               </div>
+                           </div>
+                        </div>
+                       <div class="inputfield">
+                           <label>Price</label>
+                           <input type="number" class="input" placeholder="₱">
+                        </div> 
+                       <div class="inputfield terms">
+                           <label class="check">
+                             <input type="checkbox">
+                             <span class="checkmark"></span>
+                           </label>
+                           <p>Agreed to terms and conditions</p>
+                        </div> 
+                       <div class="inputfield">
+                         <input type="submit" value="Submit" class="btn">
+                       </div>
+                     </div>
+                 </div>
+               </form>
+            </div> 
+         </div> 
+                 <!--  <input type="file" name="imgfile" required>
                    <label>Dimension</label>
                    <input type="text" name="dimension">
     
@@ -118,14 +206,6 @@
                    <input type="radio" id="Commission" name="post_type" value="Commision" onchange="rdbtnchange()">
                    <label for="Commission">For Commission</label><br><br>
     
-                   
-                   <div class="forsale" id="forsale">
-                      <label for="desc">Description</label><br>
-                      <input name="desc" type="textarea" placeholder="Describe your art work..." ><br><br>
-    
-                      <label>Price</label>
-                      <input type="textarea" name="Price" placeholder="₱">
-                   </div>
                    <div class="forcommision" id="forcommision">
                       <label>Caption</label><br>
                       <input type="textarea" name="caption" placeholder="Insert your tagline..." ><br><br>
@@ -133,7 +213,7 @@
                    <div class="buttons">
                       <input type="submit" class="buy" value="submit" name="submit"></input>
                    </div>
-                </form>
+                   -->
                 <script>
                     function rdbtnchange(){
                        let rdvalue = document.querySelectorAll("input[name='post_type']:checked")[0].value;
@@ -150,8 +230,7 @@
                     }
                  </script>
             
-      
-         </div>  
+       
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
