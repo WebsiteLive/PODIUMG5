@@ -129,7 +129,7 @@
             <div class="preview" data-target="p-2">
                 <i class="fas fa-times"></i>
                 <form action="add_items.php" enctype="multipart/form-data" method="post" class="upload"
-                   style="display: block;">
+               style="display: block;">
                    <div class="wrapper">
                      <div class="title">
                        Create Post
@@ -166,20 +166,26 @@
 
                            <div class="radio-list">
                                <div class="radio-item">
-                                   <input type="radio" name="radio" id="radio1">
+                                   <input type="radio"id="Commission" name="post_type" value="Sale" onchange="rdbtnchange()">
                                  
-                                   <label for="radio1">For Commission</label>
+                                   <label for="Commission">For Commission</label>
                                </div>
                                <div class="radio-item">
-                                   <input type="radio" name="radio" id="radio2">
-                                   <label for="radio2">For Sale</label>
+                                   <input type="radio" id="Sale" name="post_type" value="Sale" onchange="rdbtnchange()">
+                                   <label for="Sale">For Sale</label>
                                </div>
                            </div>
                         </div>
-                       <div class="inputfield">
+                     <div id="forsale">
+                        <div class="inputfield">
                            <label>Price</label>
-                           <input type="number" class="input" placeholder="₱" required>
+                           <input type="number" name="Price" class="input" placeholder="₱" required>
                         </div> 
+                     </div>
+                     <div class="forcommision" id="forcommision">
+                        <label>Caption</label><br>
+                        <input type="textarea" name="caption" placeholder="Insert your tagline..." ><br><br>
+                     </div>   
                        <div class="inputfield terms">
                            <label class="check">
                              <input type="checkbox" required>
@@ -191,8 +197,8 @@
                          <input type="submit" value="Submit" class="btn">
                        </div>
                      </div>
-                 </div>
-               </form>
+                     </div>
+                  </form>
             </div> 
          </div> 
                 <script>
@@ -202,11 +208,11 @@
      
                        if(rdvalue == "Sale"){
                           document.getElementById("forsale").style.display="block";
-                          document.getElementById("forcommision").style.display="none";
+                          document.getElementById("forcommission").style.display="none";
                        }
                        else if(rdvalue == "Commision"){
-                          document.getElementById("forcommision").style.display="block";
-                          document.getElementById("forsale").style.display="none";
+                          document.getElementById("forsale").style.display="block";
+                          document.getElementById("forcommission").style.display="none";
                        }
                     }
                  </script>
