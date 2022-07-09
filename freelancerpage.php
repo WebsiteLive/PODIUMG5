@@ -188,11 +188,6 @@
                                </div>
                            </div>
                         </div>
-                       <div class="inputfield" id="forsale">
-                           <label>Price</label>
-                           <input type="number" class="input" placeholder="₱" required>
-                        </div> 
-                  
                        <div class="inputfield terms">
                            <label class="check">
                              <input type="checkbox" required>
