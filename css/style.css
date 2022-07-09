@@ -111,7 +111,7 @@ header{
 
 .active-navigation{
   border-radius: 5px;
-  background-color: rgb(254,238,226,1);
+  background-color: #fff;
   box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -562,18 +562,17 @@ p button:active{
 }
 .bg-1{
     flex: 1;
-    background-color: rgb(180, 243, 175);
+    background-color: #414a4c;
 }
 .bg-2{
     flex: 1;
-    background-color: rgb(163, 236, 240);
+    background-color: #555555;
 }
 .about-container{
     width: 85%;
     min-height: 80vh;
     position: absolute;
     background-color: white;
-    box-shadow: 24px 24px 30px #6d8dad;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -953,6 +952,11 @@ p button:active{
         color: #000;
         font-size: 1rem;
     }
+    
+    .services{
+      height: 100vh;
+    }
+
   }
   
 
