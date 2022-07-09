@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,15 +45,17 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><button onclick="togglePopup()" class="first-button" style="color: black;">LOGIN</button></li>
                 <div class="popup" id="popup-1">
-                    <form action="login.php">
+                    <form action="login.php" method="post">
                         <div class="content">
                                 <div class="close-btn" onclick="togglePopup()" style="cursor: pointer;"><img src="img/close.png" alt=""></div> 
                             <h1 class="login-modal">LOGIN</h1> 
-                        <!--
-                            <?php if(isset($_GET['em])):?>
-                                    <p><?php echo $_GET['em']?></P>
-                                    <?php endif?>
-                        -->
+                       
+                            <?php if(isset($_GET['em'])):?>
+                                    <p><?php echo $_GET['em']?>
+                                    
+                            <?php endif?>
+                                    
+                       
                             <div class="input-field"><input placeholder="Email" class="validate" name="email" required></div>
                             <div class="input-field"><input type="password" placeholder="Password" class="validate" name="password" required></div>
                                 <button class="second-button">Login</button>
@@ -60,7 +65,7 @@
                 </div>
 
                 <div class="sipopup" id="sipopup-1">
-                    <form action="">
+                    <form action="signup.php" method="post">
                         <div class="content">
                             <div class="close-btn" onclick="myFunction()" style="cursor: pointer;"><img src="img/close.png" alt=""></div>
 
