@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+*{
+    font-family: montserrat, sans-serif;
+}
+.card{
+    border: #000;
+    border-width: 3px;
+}
+.card-header{
+    font-size: 20px;
+    line-height: 1.7rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+.container-fluid{
+    margin-top: 1rem;
+}
+.font{
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: none;
+}
+/**CHOOSE PROFILE PIC**/
+
+.profile-pic-div{
+    height: 150px;
+    width: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid grey;
+    margin-top: 7rem;
+    margin-left: 10rem;
+    z-index: 2;
+}
+#photo{
+    height: 100%;
+    width: 100%;
+}
+
+#file{
+    display: none;
+}
+
+
+#uploadBtn{
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: wheat;
+    line-height: 10px;
+    font-family: sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+form{
+    opacity: 77%;
+    margin-top: -2rem;
+}
+form .form-control{
+    margin-top: 3px;
+}
+form .form-control:focus{
+    border-color: #65453A;
+    box-shadow: none;
+  }
+
+.container{
+    background-color: #fff;
+    width: 60%;
+    min-width: 450px;
+    position: relative;
+    padding: 50px 20px;
+    border-radius: 7px;
+}
+input[type="file"]{
+    display: none;
+}
+label{
+    display: block;
+    position: relative;
+    background-color: #333;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    width: 300px;
+    padding: 18px 0;
+    margin: auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container p{
+    text-align: center;
+    margin: 20px 0 30px 0;
+}
+#images{
+    width: 90%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+figure{
+    width: 45%;
+}
+img{
+    width: 100%;
+}
+figcaption{
+    text-align: center;
+    font-size: 2.4vmin;
+    margin-top: 0.5vmin;
+}
