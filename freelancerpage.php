@@ -160,10 +160,11 @@
                        <div class="inputfield" id="forsale">
                         <label>Description</label>
                         <textarea id="my-text" rows="5" class="textarea" required></textarea>
+                        <p id="result"></p>
                         <label>Price</label>
                            <input type="number" class="input" placeholder="₱" required>
                         </div>
-                        <p id="result"></p>
+                        
 
                         <div class="inputfield" id="forcommision">
                         <label>Caption</label>
