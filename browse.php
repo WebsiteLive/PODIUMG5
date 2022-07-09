@@ -1,15 +1,20 @@
 <?php
    session_start();
 
-  
-    $type=$_GET['type'];
-  
-    
-    
+    if (isset($_GET['type'])){
+      $type=$_GET['type'];
+    }
+
+    if (isset($_GET['view'])){
+      $view=$_GET['view'];
+    }
+    else{
+      $view="Market";
+    }
 
 ?>
 <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
@@ -38,7 +43,7 @@
          <span class="tooltip">Home</span>
       </li>
       <li>
-       <a href="#">
+       <a href="freelancerpage.php">
          <i class="fa-solid fa-user-pen"></i>
          <span class="links_name">Account</span>
        </a>
@@ -66,14 +71,14 @@
         <div class="logo-details">
               <div class="logo_name" style="padding-left: 2.5rem;"> CATEGORIES</div>
           </div>
-       <a href="#">
+       <a href="browse.php">
          <i class='bx bx-folder' ></i>
          <span class="links_name">All Items</span>
        </a>
        <span class="tooltip">All Items</span>
      </li>
      <li>
-       <a href="#">
+       <a href="browse.php?view=<?php if (isset($_GET['view'])){echo $_GET['view'];}?>&type=Draw">
         <i class="fa-solid fa-pencil"></i>
          <span class="links_name">Drawing</span>
        </a>
@@ -101,9 +106,17 @@
   </div>
 
   <?php
-   include 'include/findfreelancer.php';
+
+    if ($view =='Market'){
+      include 'include/market.php';
+    }
+    else if($view =='Freelancer'){
+      echo $view;
+      
+    }
 
    
+
    ?>
 
   <script src="js/browse.js" defer></script>
