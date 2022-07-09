@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="profileinfo.css">
+    <link rel="stylesheet" href="css/profileinfo.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <title>Document</title>
+    <title>Personal Information</title>
 </head>
 <body>
     <!--CONTAINER-->
     <div class="container-fluid" style="max-width: 50rem; margin-bottom: 1rem;">
         <div class="card">
             <div class="card-header" style="background-color:#333;">
+            <br>
             Personal Information
             <p class="font">Tell us a bit about yourself. This Information will appear on your profile, so that potential buyers can get to know you better.
 
             </p>
             </div>
-            <div class="card-body text-center" style="background-color: #f8ece3;">
+            <div class="card-body text-center" style="background-color: #444;">
                
                 <center>
                 <div class="profile-pic-div">
@@ -34,48 +35,52 @@
                 <form>
                     <div class="form-row" style="padding-left: 3rem;">
                         <div class="col" style="max-width: 20rem;">
-                            <input type="text" class="form-control" id="FN" placeholder="First Name">
+                            <input type="text" class="form-control" id="FN" placeholder="First Name" required>
                         </div>
                         <div class="col" style="max-width: 20rem;">
-                            <input type="text" class="form-control" id="LN" placeholder="Last Name">
+                            <input type="text" class="form-control" id="LN" placeholder="Last Name" required>
                         </div>
                     </div>
                     <br>
                     <div class="input-group" style="padding-left: 3rem;">
-                        <textarea class="form-control" style="max-width: 39.5rem;" aria-label="With textarea" placeholder="Bio"></textarea>
+                        <textarea class="form-control" style="max-width: 39.5rem;" aria-label="With textarea" placeholder="Bio" required></textarea>
                     </div>
                     <br>
-
-                <!--SOCMED LINKS-->
-                    <h5>Social Media Links</h5>
                     <div class="form-row" style="padding-left: 3rem;">
                         <div class="col" style="max-width: 20rem;">
-                            <input type="text" class="form-control" id="facebook" placeholder="Facebook">
+                            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" required>
+                                <option selected>Language...</option>
+                                <option value="1">Tagalog</option>
+                                <option value="2">English</option>
+                                <option value="3">Waray</option>
+                                <option value="4">Hiligaynon (Ilonggo)</option>
+                                <option value="5">Bicol</option>
+                                <option value="6">Cebuano</option>
+                              </select>
+                        </div>
+                        <div class="col" style="max-width: 20rem;">
+                            <input type="text" class="form-control" id="JobDesc" placeholder="Job Description" required>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <!--SOCMED LINKS-->
+                    <h5 style="color: #fff;">Social Media Links</h5>
+                    <div class="form-row" style="padding-left: 3rem;">
+                        <div class="col" style="max-width: 20rem;">
+                            <input type="text" class="form-control" id="facebook" placeholder="Facebook" required>
                         </div>
                         <div class="col" style="max-width: 20rem;">
                             <input type="text" class="form-control" id="instagram" placeholder="Instagram">
                         </div>
                     </div>
+                <br>
+                <br> 
+                    <input class="btn btn-light text-dark" type="submit" value="Submit">
                 </form>
-                <br>
-                <br>
-                <hr>
-
-                <!--PORTFOLIO-->
-                <h5 style="font-weight: bold;">PORTFOLIO</h5>
-                <hr>
-
-                <div class="container">
-                    <input type="file" id="file-input" accept="image/png, image/jpeg" onchange="preview()" multiple>
-                    <label for="file-input">
-                        <i class="fas fa-upload"></i> &nbsp; Upload your Projects
-                    </label>
-                    <p id="num-of-files">No Files Chosen</p>
-                    <div id="images"></div>
-
-                    <button class="btn btn-dark" type="submit">Submit</button>
+                    <hr>
+                <p class="card-text" style="padding-top: 1rem; color: #fff;">Copyright © 2022 PODIUM. All rights reserved.</p> 
                 </div>
-                <p class="card-text" style="padding-top: 1rem;">Copyright © 2022 PODIUM. All rights reserved.</p>
             </div>
         </div>
     </div>

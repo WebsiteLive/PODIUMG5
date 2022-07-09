@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
 *{
     font-family: montserrat, sans-serif;
 }
@@ -7,7 +8,9 @@
 }
 .card-header{
     font-size: 20px;
+    line-height: 1.7rem;
     color: #fff;
+    text-transform: uppercase;
 }
 .container-fluid{
     margin-top: 1rem;
@@ -15,6 +18,7 @@
 .font{
     font-size: 15px;
     font-weight: normal;
+    text-transform: none;
 }
 /**CHOOSE PROFILE PIC**/
 
@@ -28,7 +32,7 @@
     overflow: hidden;
     border: 1px solid grey;
     margin-top: 7rem;
-    margin-left: 12rem;
+    margin-left: 10rem;
     z-index: 2;
 }
 #photo{
@@ -59,6 +63,10 @@
 
 form{
     opacity: 77%;
+    margin-top: -2rem;
+}
+form .form-control{
+    margin-top: 3px;
 }
 form .form-control:focus{
     border-color: #65453A;
@@ -66,7 +74,7 @@ form .form-control:focus{
   }
 
 .container{
-    background-color: #ffffff;
+    background-color: #fff;
     width: 60%;
     min-width: 450px;
     position: relative;
