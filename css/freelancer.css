@@ -1,0 +1,729 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+
+:root{
+    --brown:#000;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; 
+    border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background: #fff;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.heading{
+    text-align: center;
+    margin: 5rem 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #65453A;
+    color: #fff;
+}
+
+.heading span{
+    color: #65453A;
+}
+/**START OF SIDE BAR NAVIGATION**/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+   
+header .user img{ /**PROFILE PICTURE**/
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    margin-top: 7rem;
+    border: .5rem solid #FEEEE2;
+}
+header .user .name{
+    font-size: 3.5rem;
+    color: #eee;
+}
+header .user .position{
+    font-size: 2rem;
+    color: #eee;
+}
+header .navbar{
+    width: 100%;
+    margin-bottom: 4rem;
+}
+header .navbar ul{
+    list-style-type: none;
+    padding: 1rem 3rem;
+}
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.2rem 0;
+    background: #222;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+    text-decoration: none;
+}
+header .navbar ul li a:hover{
+    background-color: #111;
+}
+
+#menu{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+.home{
+    display: flex;
+}
+.description{
+    width: 100%;
+    padding: 0 10rem;
+    margin-top: 15rem;
+}
+.home .description h3{
+    font-size: 2.5rem;
+}
+.home .description h1{
+    font-size: 5rem;
+}
+.home h1 span{
+    color: #000;
+}
+.home .description p{
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.logo{
+    display: flex;
+}
+.logo .facebook{
+    width: 5rem;
+    height: 5rem;
+    padding: 0.7rem;
+}
+.logo .instagram{
+    width: 5rem;
+    height: 5rem;
+    padding: 0.7rem;
+}
+.home-about{
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}
+.home-about h3{
+    font-size: 2rem;
+    color: #65453A;
+    padding: 1rem 0;
+    font-weight: normal;
+}
+.home-about h3 span{
+    padding: 0 .5rem;
+    color: #222;
+}
+.box-container{
+    max-width: 100%;
+    height: 100vh;
+    margin:0 auto;
+    padding: 0 10rem;
+ }
+ .container{
+    width: 100%;
+    height: 100vh;
+    padding-left: 10rem;
+ }
+ .aboutme{
+    font-size: 3.5rem;
+    color: #000;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 2rem;
+ }
+ .box-container .title{
+    margin-top: 2rem;
+    font-size: 3.5rem;
+    color: #000;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+ }
+ 
+ .box-container .products-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
+    gap:5rem;
+    margin:auto;
+ }
+ 
+ .box-container .products-container .product{
+    text-align: center;
+    padding:3rem 2rem;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    outline: .1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+    width: 30rem;
+    height: 30rem;
+ }
+ 
+ .box-container .products-container .product:hover{
+    outline: .2rem solid #222;
+    outline-offset: 0;
+ }
+ 
+ .box-container .products-container .product img{
+    height: 15rem;
+    width: 26rem;
+ }
+ 
+ .box-container .products-container .product:hover img{
+    transform: scale(.9);
+ }
+ 
+ .box-container .products-container .product h3{
+    padding:.5rem 0;
+    font-size: 2rem;
+    color:#b2b2b2;
+ }
+ .box-container .products-container .product .artist{
+    padding:.5rem 0;
+    font-size: 2rem;
+    color:#222;
+ }
+ 
+ .box-container .products-container .product:hover h3{
+    color: #D4C2B4;
+ }
+ 
+ .box-container .products-container .product .price{
+    font-size: 2rem;
+    color:#444;
+ }
+ 
+ .products-preview{
+    position: fixed;
+    top:0; left:0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    display: none;
+    justify-content: center;
+ }
+ 
+ .products-preview .preview{
+    display: none;
+    padding:4rem;
+    background: #fff;
+    position: relative;
+    margin:2rem;
+    width: 60rem;
+    height: 80rem;
+    margin-left: 2rem;
+ }
+
+ .products-preview .preview.active{
+    display: inline-block;
+ }
+ 
+ .products-preview .preview img{
+    height: 40rem;
+    width: 53rem;
+ }
+ 
+ .products-preview .preview .fa-times{
+    position: absolute;
+    top:1rem; right:1.5rem;
+    cursor: pointer;
+    color:#444;
+    font-size: 4rem;
+ }
+ 
+ .products-preview .preview .fa-times:hover{
+    transform: rotate(90deg);
+ }
+ 
+ .products-preview .preview h3{
+    color:#000;
+    padding: 2rem 0 0 0;
+    font-size: 2.5rem;
+ }
+ 
+ .products-preview .preview p{
+    line-height: 1.5;
+    padding:1rem 0;
+    font-size: 1.6rem;
+    color:#777;
+ }
+ 
+ .products-preview .preview .price{
+    padding:1rem 0;
+    font-size: 2.5rem;
+    color:#65453A;
+ }
+ 
+ .products-preview .preview .buttons{
+    display: flex;
+    gap:1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+ }
+ 
+ .products-preview .preview .buttons a{
+    flex:1 1 16rem;
+    padding:1rem;
+    font-size: 1.8rem;
+    color:#444;
+    border:.1rem solid #444;
+ }
+ 
+ .products-preview .preview .buttons a.cart{
+    background: #444;
+    color:#fff;
+ }
+ 
+ .products-preview .preview .buttons a.cart:hover{
+    background: #111;
+ }
+ 
+ .products-preview .preview .buttons a.buy:hover{
+    background: #444;
+    color:#fff;
+ }
+
+
+.see-more{
+    background: #444;
+    color: #fff;
+    font-size: 2rem;
+    padding: 2rem;
+    border-radius: 5rem;
+}
+
+.see-more:hover{
+    background: #000;
+}
+
+
+@media(max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+    .home{
+        padding:1rem 4rem;
+    }
+    
+
+}
+@media(max-width: 991px){
+    header{
+        left: -120%;
+    }
+    #menu{
+        display: block;
+    }
+    header.toggle{
+        left: 0%;
+    }
+    body{
+        padding: 0;
+    }
+}
+
+@media(max-width: 768px){
+    html{
+        font-size: 50%;
+    }
+    .home .description h1{
+        font-size: 4rem;
+        margin-top: 1rem;
+    }
+    .home{
+        display: inline;
+        justify-content: center;
+        padding: 0 0 15rem 0;
+    }
+    .description{
+        width: 100%;
+        padding: 0 15rem;
+        margin-top: 30rem;
+        margin-bottom: 15rem;
+    }
+    .home-about{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0.1rem;
+        margin-bottom: 15rem;
+        padding: 0 0 0 15rem;
+    }
+}
+
+@media(max-width: 400px){
+       
+    header{
+        width: 100vw;
+    }
+    .heading{
+        margin: 0 3rem;
+    }
+    .about .row .counter .box{
+        width: 100%;
+        margin-left: 4rem;
+    }
+    .aboutme{
+    font-size: 3.5rem;
+    color: #000;
+    margin-bottom: 0rem;
+    text-transform: uppercase;
+    text-align: center;
+    }
+    .box-container .title{
+        margin-top: 5rem;
+        font-size: 3.5rem;
+        color: #000;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+        text-align: center;
+     }
+     
+    .portfolio .box-container .box{
+        width: 100%;
+    }
+    .home .description h1{
+        font-size: 4rem;
+        margin-top: 1rem;
+    }
+    .home{
+        display: inline;
+        justify-content: center;
+    }
+    .description{
+        width: 100%;
+        margin-top: 30rem;
+        padding: 5%;
+    }
+    .home-about{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0rem;
+        margin-bottom: 17rem;
+        padding: 5%;
+    }
+}
+
+
+
+/*Create Post Modal*/
+
+
+.wrapper .title{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  padding-left: 2rem;
+}
+
+.wrapper .form{
+  width: 100%;
+}
+
+.wrapper .form .inputfield{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+#result{
+    float: right;
+    margin-top: -2rem;
+}
+
+.wrapper .form .inputfield label{
+   width: 200px;
+   color: #000;
+   margin-right: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+
+.wrapper .form .inputfield .input:focus,
+.wrapper .form .inputfield .textarea:focus,
+.wrapper .form .inputfield .custom_select select:focus{
+  border: 1px solid #000;
+}
+
+.wrapper .form .inputfield p{
+   font-size: 14px;
+   color: #757575;
+}
+.wrapper .form .inputfield .check{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.wrapper .form .inputfield .check .checkmark{
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  display: block;
+  position: relative;
+}
+.wrapper .form .inputfield .check .checkmark:before{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 5px;
+  height: 2px;
+  border: 2px solid;
+  border-color: transparent transparent #fff #fff;
+  transform: rotate(-45deg);
+  display: none;
+}
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
+  background: #000;
+}
+
+.wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
+  display: block;
+}
+
+.wrapper .form .inputfield .btn{
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px; 
+  border: 0px;
+  background:  #444;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover{
+  background: #000;
+}
+
+.wrapper .form .inputfield:last-child{
+  margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+  .wrapper .form .inputfield{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .form .inputfield label{
+    margin-bottom: 5px;
+  }
+  .wrapper .form .inputfield.terms{
+    flex-direction: row;
+  }
+}
+
+
+
+
+
+
+
+/**Radio Button for Create Post Modal**/
+
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+.radio-section{
+    display: flex;
+    justify-content: center;
+    padding-left: 3rem;
+    padding-bottom: 1rem;
+}
+.radio-item [type="radio"]{
+    display: none;
+}
+
+.radio-item + .radio-item{
+    margin-top: 15px;
+}
+.radio-item label{
+    display: block;
+    padding: 15px 50px;
+    background: #444;
+    border:2px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+    min-width: 250px;
+    white-space: nowrap;
+    position: relative;
+    color: #fff;
+}
+.radio-item label:after,
+.radio-item label:before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.radio-item label:after{
+    height: 20px;
+    width: 20px;
+    border:2px solid #000;
+    left: 20px;
+    top: calc(50% - 12px);
+}
+.radio-item label:before{
+    background: #fff;
+    height: 10px;
+    width: 10px;
+    left: 27px;
+    top: calc(50% - 5px);
+    transform: scale(5);
+    transition: .4s ease-in-out 0s;
+    opacity: 0;
+    visibility: hidden;
+}
+.radio-item [type="radio"]:checked ~ label{
+    border-color: #fff;
+}
+
+.radio-item [type="radio"]:checked ~ label:before{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+
+
+
+
+
+/**Upload Button For Create Post Modal**/
+
+
+.upload-box{
+    font-size: 15px;
+    background: #c0c0c0;
+    width: 250px;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    margin-left: 6rem;
+    margin-bottom: 1rem;
+}
+
+::-webkit-file-upload-button{
+    color: #fff;
+    background: #444;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+::-webkit-file-upload-button:hover{
+    background: #000;
+}
