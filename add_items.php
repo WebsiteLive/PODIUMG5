@@ -9,7 +9,7 @@
     $item_type=$_POST['item_type'];
     $post_type=$_POST['radio'];
     $dimension=$_POST['dimension'];
-    $post_caption=$_POST['caption'];
+    $post_caption=$_POST['Caption'];
     $post_description=$_POST['desc'];
 
     $price=$_POST['Price'];

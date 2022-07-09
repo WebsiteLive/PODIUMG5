@@ -140,12 +140,12 @@
                      <div class="form">
                          <div class="inputfield">
                            <label>Type</label>
-                           <div class="custom_select" name="item_type"required>
-                             <select required>
-                               <option value="">Select</option>
-                               <option value="male">Drawing</option>
-                               <option value="female">Painting</option>
-                               <option value="female">Digital Art</option>
+                           <div class="custom_select" required>
+                             <select name="item_type" required>
+                               <option value="" disable selected>Select</option>
+                               <option value="Drawing">Drawing</option>
+                               <option value="Painting">Painting</option>
+                               <option value="Digital Art">Digital Art</option>
                              </select>
                            </div>
                         </div> 
@@ -159,22 +159,22 @@
                         </div> 
                        <div class="inputfield" id="forsale">
                         <label>Description</label>
-                        <textarea id="my-text" rows="5" class="textarea" name="desc" required></textarea>
+                        <textarea id="my-text" rows="5" class="textarea" name="desc" ></textarea>
                         <p id="result"></p>
                         <label>Price</label>
-                           <input type="number" class="input" placeholder="₱" name="Price"required>
+                           <input type="number" class="input" placeholder="₱" name="Price">
                         </div>
                         
 
                         <div class="inputfield" id="forcommision">
                         <label>Caption</label>
-                        <textarea id="my-text" rows="5" class="textarea" name="Caption"required></textarea>
+                        <textarea id="my-text" rows="5" class="textarea" name="Caption"></textarea>
                         
                         </div>
                         <p id="result"></p>
                         <br>
 
-                        <center><input type="file" class="upload-box" required></center>
+                        <center><input type="file" class="upload-box" name="imgfile"required></center>
                         <div class="radio-section" required>
 
                            <div class="radio-list">
