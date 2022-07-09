@@ -56,14 +56,13 @@
        </a>
        <span class="tooltip">Find an Artist</span>
      </li>
-     <li>
-        <a href="#">
-            <i class="fa-solid fa-user-tie"></i>
-          <span class="links_name">Be a Freelancer</span>
-        </a>
-        <span class="tooltip">Be a Freelancer</span>
-      </li>
-     <li>
+   <li>
+              <a href="#">
+                  <i class="fa-solid fa-user-tie"></i>
+                <span class="links_name">Be a Freelancer</span>
+              </a>
+              <span class="tooltip">Be a Freelancer</span>
+            </li>
         <br>
         <br>
         <br>

@@ -7,7 +7,7 @@
            <div class="price">$<?php echo $price?></div>
            <center>           
             <div class="buttons">
-              <a href="" class="description">Go to Description Page</a>
+              <a href="descriptionofArt.php?threadid=<?php ECHO $id?>" class="description">Go to Description Page</a>
            </div>
         </center>
 
