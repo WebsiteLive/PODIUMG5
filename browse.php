@@ -67,7 +67,7 @@
         }
         else{
         echo '<li>
-        <a href="#">
+        <a href="profileinfo.php">
             <i class="fa-solid fa-user-tie"></i>
           <span class="links_name">Be a Freelancer</span>
         </a>
