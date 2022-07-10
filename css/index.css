@@ -459,8 +459,8 @@ p button:active{
 	margin: auto;
 	margin-top: 5px;
 	font-size: 28px;
-	color: #fff;
-	text-shadow: 2px 2px #000;
+	color: #000;
+	text-shadow: 2px 2px #fff;
 	line-height: 1.9;
 	font-family: poppins;
 }
