@@ -4,7 +4,7 @@
 <section class="home-section">
       <div class="container">
 
-        <h3 class="title">GALLERY MARKET PAGE</h3>
+        <h3 class="title">Artist's Page</h3>
   
         <div class="products-container">
   
@@ -15,23 +15,25 @@
             else{
 
                if(isset($_GET['type'])){                       
-                  $query = "SELECT*FROM art_submission WHERE post_type='Sale' AND item_type='$type'ORDER BY date_published DESC";
+                  $query = "SELECT*FROM art_submission WHERE post_type='Commision' AND item_type='$type'ORDER BY date_published DESC";
                      $result = odbc_exec($con,$query);
              
                      if(!empty($result)) {
                         while ($row = odbc_fetch_array($result)) {
                         $id=$row['thread_Id'];    
                         $title=$row['item_title'];
-                        $price=$row['price'];
-                         $img_url=$row['item_imgurl'];
-                        $desc=$row['post_description'];
-                        include 'items.php';
+                        $img_url=$row['item_imgurl'];
+                        $Caption=$row['post_caption'];
+                        echo $caption;
+
+                        
+                        include 'items_commision.php';
                       
                         }
                      }
                   }
                else{
-                  $query = "SELECT*FROM art_submission WHERE post_type='Sale' ORDER BY date_published DESC";
+                  $query = "SELECT*FROM art_submission WHERE post_type='Commision' ORDER BY date_published DESC";
                   $result = odbc_exec($con,$query);
              
                   if(!empty($result)) {
@@ -41,7 +43,7 @@
                       $price=$row['price'];
                       $img_url=$row['item_imgurl'];
                       $desc=$row['post_description'];
-                      include 'items.php';
+                      include 'items_commision.php';
                       
                      }
                   }
@@ -63,7 +65,7 @@
          else{
 
             if(isset($_GET['type'])){                       
-               $query = "SELECT*FROM art_submission WHERE post_type='Sale' AND item_type='$type'ORDER BY date_published DESC";
+               $query = "SELECT*FROM art_submission WHERE post_type='Commision' AND item_type='$type'ORDER BY date_published DESC";
                   $result = odbc_exec($con,$query);
           
                   if(!empty($result)) {
@@ -79,7 +81,7 @@
                   }
                }
             else{
-               $query = "SELECT*FROM art_submission WHERE post_type='Sale' ORDER BY date_published DESC";
+               $query = "SELECT*FROM art_submission WHERE post_type='Commision' ORDER BY date_published DESC";
                $result = odbc_exec($con,$query);
           
                if(!empty($result)) {

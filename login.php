@@ -29,7 +29,7 @@
                 $_SESSION['user_type']=$row2['user_type'];
                 $type=$_SESSION['user_type'];
 
-                header("Location: browse.php");
+                header("Location: browse.php?view=Market");
                 }
                 
             }
