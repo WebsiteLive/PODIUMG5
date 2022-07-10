@@ -1,6 +1,8 @@
 <?php
    session_start();
 
+   $currentuser=$_SESSION['User_Id'];
+
     if (isset($_GET['type'])){
       $type=$_GET['type'];
     }
@@ -46,7 +48,7 @@
        <a href="<?php 
           $usertype=$_SESSION['user_type'];
           if($usertype=='Freelancer'){
-            echo'freelancerpage.php';
+            echo "freelancerpage.php?userid=".$currentuser ;
           }
           else{
             echo'EditAccount.php';
@@ -138,6 +140,10 @@
     }
     else if($view =='Freelancer'){
       include 'include/findartists.php';
+      
+    }
+    else if($view =='Portfolio'){
+      include 'include/portfolio.php';
       
     }
 

@@ -2,7 +2,8 @@
    session_start();
    include 'dbcon.php';
 
-   $id=$_SESSION['User_Id'];
+   $id=$_GET['userid'];
+   $currentuser=$_SESSION['User_Id'];
    
    if(!$con){
       header("Location: Error.php");
@@ -95,42 +96,7 @@
                   <div class="artist">Camille Gudio</div>
                   <div class="price">₱2.00</div>
                </div>
-               <div class="product" data-name="p-1">
-                  <img src="images/img1.jpg" alt="">
-                  <h3><i> Mona Lisa</i></h3>
-                  <div class="artist">Camille Gudio</div>
-                  <div class="price">₱2.00</div>
-               </div>
-               <div class="product" data-name="p-1">
-                  <img src="images/img1.jpg" alt="">
-                  <h3><i> Mona Lisa</i></h3>
-                  <div class="artist">Camille Gudio</div>
-                  <div class="price">₱2.00</div>
-               </div>
-               <div class="product" data-name="p-1">
-                  <img src="images/img1.jpg" alt="">
-                  <h3><i> Mona Lisa</i></h3>
-                  <div class="artist">Camille Gudio</div>
-                  <div class="price">₱2.00</div>
-               </div>
-               <div class="product" data-name="p-1">
-                  <img src="images/img1.jpg" alt="">
-                  <h3><i> Mona Lisa</i></h3>
-                  <div class="artist">Camille Gudio</div>
-                  <div class="price">₱2.00</div>
-               </div>
-               <div class="product" data-name="p-1">
-                  <img src="images/img1.jpg" alt="">
-                  <h3><i> Mona Lisa</i></h3>
-                  <div class="artist">Camille Gudio</div>
-                  <div class="price">₱2.00</div>
-               </div>
-               <div class="product" data-name="p-1">
-                  <img src="images/img1.jpg" alt="">
-                  <h3><i> Mona Lisa</i></h3>
-                  <div class="artist">Camille Gudio</div>
-                  <div class="price">₱2.00</div>
-               </div>
+               
       
                <div class="product" data-name="p-2">
                   <img src="images/dibil.png" alt="">
@@ -144,7 +110,7 @@
             <br>
             <br>
             <br>
-            <center><a href="" class="see-more">See More</a></center>
+            <center><a href="<?php echo "browse.php?view=Portfolio&id=". $id?>" class="see-more">See More</a></center>
          </div>
          <div class="products-preview">
       
