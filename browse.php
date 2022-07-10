@@ -30,7 +30,7 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <img src="image/Podium.png" alt="" class="icon">
+      <img src="image/podium.png" alt="" class="icon">
         <div class="logo_name"><a href="index.php" style="color: white;">&nbsp; &nbsp;PODIUM</a></div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
@@ -98,9 +98,9 @@
      <li>
        <a href="browse.php?view=<?php if (isset($_GET['view'])){echo $_GET['view'];}?>&type=Drawing">
         <i class="fa-solid fa-pencil"></i>
-         <span class="links_name">Drawing</span>
+        <span class="links_name">Drawing</span>
        </a>
-       <span class="tooltip">Pencil</span>
+       <span class="tooltip">Drawing</span>
      </li>
      <li>
        <a href="browse.php?view=<?php if (isset($_GET['view'])){echo $_GET['view'];} else{ echo "Market";}?>&type=Painting">

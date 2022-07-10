@@ -482,9 +482,18 @@ header .navbar ul li a:hover{
   align-items: center;
 }
 
+
+.wrapper .form .inputfield input{
+    text-transform: none;
+  }
+
+.wrapper .form .inputfield textarea{
+    text-transform: none;
+  }
+
 #result{
     float: right;
-    margin-top: -2rem;
+    margin-top: -1rem;
 }
 
 .wrapper .form .inputfield label{
@@ -717,7 +726,7 @@ ul {
     border-radius: 5px;
     outline: none;
     text-align: center;
-    margin-left: 6rem;
+    margin-left: 3rem;
     margin-bottom: 1rem;
 }
 
