@@ -54,7 +54,12 @@
             <li><a href="#about">About</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="browse.php">Back</a></li>
-            <li><a href="#log-out">Logout</a></li>
+            <?php
+               if($id==$currentuser){
+                  echo '<li><a href="#log-out">Logout</a></li>';
+               }
+            ?>
+            
         </ul>
     </nav>
     </header>
@@ -97,11 +102,15 @@
                   <div class="price">₱2.00</div>
                </div>
                
-      
-               <div class="product" data-name="p-2">
+               <?php
+               if($id==$currentuser){
+                  echo '<div class="product" data-name="p-2">
                   <img src="images/dibil.png" alt="">
                   <h3>Upload File</h3>
-               </div>
+               </div>';
+               }
+            ?>
+               
             </div>
             <br>
             <br>
@@ -123,6 +132,7 @@
                <p>Dimension: 24x30</p>
                <div class="price">$2.00</div>
             </div>
+
             <div class="preview" data-target="p-2">
                 <i class="fas fa-times"></i>
                 <form action="add_items.php" enctype="multipart/form-data" method="post" class="upload"
