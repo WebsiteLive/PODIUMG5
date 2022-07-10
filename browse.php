@@ -36,7 +36,7 @@
     </div>
     <ul class="nav-list">
       <li>
-        <a href="browse.php">
+        <a href="browse.php?view=Market">
             <i class="fa-solid fa-house"></i>
           <span class="links_name">Home</span>
         </a>
