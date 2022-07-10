@@ -1,5 +1,28 @@
 <?php
    session_start();
+   include 'dbcon.php';
+
+   $id=$_SESSION['User_Id'];
+   
+   if(!$con){
+      header("Location: Error.php");
+  }
+  else{
+     $query = "SELECT user_basicinfo.User_Id,user_profile.Profile_img,user_profile.job_desc,user_profile.language,user_profile.fb_url,user_profile.ig_url
+     ,user_profile.self_description, user_basicinfo.first_name,user_basicinfo.first_name,user_basicinfo.last_name
+     FROM user_profile
+     JOIN user_basicinfo ON user_profile.User_Id=user_basicinfo.User_Id WHERE user_basicinfo.User_Id='$id'";
+     $result = odbc_exec($con,$query);
+     while ($row = odbc_fetch_array($result)) {
+      $img=$row['Profile_img'];
+      $intro=$row['self_description'];
+      $jd=$row['job_desc'];
+      $name=$row['first_name']." ".$row['last_name'];
+
+
+     }
+
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +37,7 @@
 <body>
     <header>
     <div class="user">
-        <img src="images/profile.jpg" alt="">
+        <img src="<?php echo $img?>" alt="">
         <h3 class="name">Adrian Pulao</h3>
         <p class="position">Digital Artist</p>
     </div>

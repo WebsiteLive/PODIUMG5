@@ -56,13 +56,31 @@
        </a>
        <span class="tooltip">Find an Artist</span>
      </li>
-   <li>
-              <a href="#">
-                  <i class="fa-solid fa-user-tie"></i>
-                <span class="links_name">Be a Freelancer</span>
-              </a>
-              <span class="tooltip">Be a Freelancer</span>
-            </li>
+
+     <?php
+       if(isset($_SESSION['User_Id'])){
+        $usertype=$_SESSION['user_type'];
+
+        if ($usertype=='Freelancer'){
+
+
+        }
+        else{
+        echo '<li>
+        <a href="profileinfo.php">
+            <i class="fa-solid fa-user-tie"></i>
+          <span class="links_name">Be a Freelancer</span>
+        </a>
+        <span class="tooltip">Be a Freelancer</span>
+      </li>';
+        }
+    }
+    else{
+        
+    }
+   
+            ?>
+        <br>
         <br>
         <br>
         <br>
@@ -71,7 +89,7 @@
               <div class="logo_name" style="padding-left: 2.5rem;"> CATEGORIES</div>
           </div>
           <li>
-       <a href="browse.php?view=<?php if (isset($_GET['view'])){echo $_GET['view'];} else{ echo "Market";}?>">
+       <a href="browse.php?view=<?php if (isset($_GET['view'])){echo $_GET['view'];} else{ echo "Market";}?> ">
          <i class='bx bx-folder' ></i>
          <span class="links_name">All Items</span>
        </a>
@@ -99,7 +117,7 @@
        <span class="tooltip">Digital Arts</span>
      </li>
      <li class="profile">
-        <a href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logout</a>
+        <a href="signout.php">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logout</a>
          <i class='bx bx-log-out' id="log_out" ></i>
      </li>
     </ul>
