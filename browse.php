@@ -137,7 +137,7 @@
       include 'include/market.php';
     }
     else if($view =='Freelancer'){
-      echo $view;
+      include 'include/findartists.php';
       
     }
 
