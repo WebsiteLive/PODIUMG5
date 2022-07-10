@@ -166,24 +166,16 @@
 	<!--IMAGE SLIDER-->
 	<div id="carouselExampleIndicators" class="carousel slide image-carousel" data-ride="carousel">
 	    <ol class="carousel-indicators">
-	    	<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-	    	<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+	    	<li data-target="#carouselExampleIndicators" data-slide-to="0"class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 	   		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 		</ol>
 	    <div class="carousel-inner">
-	    	<div class="carousel-item active">
-	        	<img class="d-block w-100 image-carousel" src="img/m.jpg" alt="PODIUM">
-	        	<div class="carousel-caption d-md-block text" style="color: #65453A;">
-				    <h5 class="animate__animated animate__slideInUp text">PODIUM: Artist Freelancing Website</h5>
-				    <p class="animate__animated animate__slideInUp"><i>"Every artist was first an amateur."</i></p>
-				    <p class="animate__animated animate__slideInUp">&nbsp;&nbsp;&ndash; Ralph Waldo Emerson</p>
-				    <!--&nbsp; = space, &ndash; = en dash "-" -->
-				</div>
-	    	</div>
-		    <div class="carousel-item">
-		        <img class="d-block w-100 image-carousel" src="img/2ndpic.jpg" alt="2nd Slide">
+	    	
+		    <div class="carousel-item active">
+		        <img class="d-block w-100 image-carousel" src="img/2ndpic.jpg" alt="1st Slide">
 		        <div class="carousel-caption d-md-block">
-				    <h5 class="text">DREAM BIG AND LET YOUR ART SHINE</h5>
+				    <h5 class="text">BUY • SELL • ARTWORKS </h5>
 					<?php
 					if(isset($_SESSION['User_Id'])){
 						
@@ -196,6 +188,15 @@
 				    
 				</div>
 		    </div>
+            <div class="carousel-item">
+	        	<img class="d-block w-100 image-carousel" src="img/m.jpg" alt="PODIUM">
+	        	<div class="carousel-caption d-md-block text" style="color: #65453A;">
+				    <h5 class="animate__animated animate__slideInUp text">PODIUM: Artist Freelancing Website</h5>
+				    <p class="animate__animated animate__slideInUp"><i>"Every artist was first an amateur." </i></p>
+				    <p class="animate__animated animate__slideInUp">&nbsp;&nbsp;&ndash; Ralph Waldo Emerson</p>
+				    <!--&nbsp; = space, &ndash; = en dash "-" -->
+				</div>
+	    	</div>
 		    <div class="carousel-item">
 		        <img class="d-block w-100 image-carousel" src="img/wall.jpg" alt="ARTS">
 		        <div class="carousel-caption d-md-block">
