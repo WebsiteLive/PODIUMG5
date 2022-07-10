@@ -562,7 +562,7 @@ p button:active{
   height: 100vh;
   align-items: center;
   justify-content: center;
-  padding-top: 10rem;
+  padding-top: 5rem;
 }
 
 /* End of Services Page */
@@ -632,7 +632,7 @@ p button:active{
 
 .about-header{
     font-size: 70px;
-    padding: 20px 0px;
+    padding: 10px 0px;
 }
 
 /* end of aboutpage */
@@ -643,7 +643,7 @@ p button:active{
 
 .contact{
     height: 100vh;
-    padding-top: 10rem;
+    padding-top: 5rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
