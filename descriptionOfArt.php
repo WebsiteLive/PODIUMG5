@@ -73,7 +73,7 @@
 		
 					</div>
 						<div class="floating-parent">
-						<a href="freelancerpage.php?userid=<?php echo $creator?>" class="widgetlabel">Go to Artist's page  <i class="far fa-long-arrow-alt-right"></i></a>
+						<a href="freelancerpage.php?userid=<?php echo $creator?>" class="widgetlabel">Go to Artist's page<p> </p><i class="far fa-long-arrow-alt-right"></i></a>
 					</div>
 				</div>
 			</div>
