@@ -73,9 +73,9 @@ header{
   }
 
 .nav-menu li a:hover{
-    color: #7c1111;
-    text-shadow: 0 0 2px black;
-    border-bottom: 2px solid #65453A;
+    color: white;
+    text-shadow: 0 0 10px black;
+    border-bottom: 2px solid black;
     border-radius: 2px;
     transition: all ease-in-out;
     transition-delay: 0.1s;
@@ -84,11 +84,11 @@ header{
 
 .nav-menu li .active{
     color: white;
-    text-shadow: 0px 1px 15px #610e0e;
+    text-shadow: 0px 1px 15px black;
 }
 
 .active{
-    border-bottom: 2px solid #65453A;
+    border-bottom: 2px solid black;
     border-radius: 2px;
     transition: ease-in-out;
     transition-delay: 0.3s;
@@ -105,7 +105,7 @@ header{
     outline: none;
     border: none;
     color: white;
-    text-shadow: 0px 1px 15px #610e0e;
+    text-shadow: 0px 1px 15px black;
   }
 
 
@@ -127,20 +127,7 @@ header{
 }
 
 
-.active-lgn{
-    background-color: #ff0000;
-    box-shadow: 0 0 8px black;
-    border-radius: 5px;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    margin-left: 1vw;
-}
 
-.active-lgn:hover{
-    transform: scale(1.2);
-	transition: all .2s linear;
-    background-color: #7c1111;
-}
 
 .popup .content {
   margin-top: 20rem;
@@ -158,6 +145,12 @@ header{
   z-index: 1;
   box-shadow:  2px 2px 52px #2e2d2d, 
               0px 0px 15px #000000;
+}
+
+.popup a:hover{
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .popup .close-btn {
@@ -262,14 +255,14 @@ outline: 1px solid slategrey;
   padding: 20px 30px;
   border-radius: 40px;
   border: none;
-  background: #FEEEE2;
+  background: white;
   transition: box-shadow .35s ease !important;
   outline: none;
 }
   
 .signup-button:active{
   background: #000000;
-  box-shadow: 5px 5px 10px #FEEEE2, -5px -5px 10px #FEEEE2;
+  box-shadow: 5px 5px 10px white, -5px -5px 10px white;
   border: none;
   outline: none;
   color: white;
@@ -278,21 +271,25 @@ outline: 1px solid slategrey;
 .signup-button:hover {
   box-shadow: 5px 5px 10px black, -5px -5px 10px black;
   transition-delay: 0.5s;
+  font-weight: 700;
 }
 
 form .card label{
   text-align: left;
-  color: #FEEEE2;
+  color: white;
+  text-transform: uppercase;
+}
+  
+.card-signup{
+  margin-top: 1vh;
+  border: none;
+  text-align: left;
   text-transform: uppercase;
 
 }
   
-.card-signup{
-  border: none;
-}
-  
 .form-control {
-  background-color: #FEEEE2;
+  background-color: white;
   border-radius: 10px;
   color:rgba(128, 128, 128, 0.352);
   height: 60px;
@@ -329,7 +326,7 @@ border-radius: 10px;
 border: none;
 margin-bottom: 15px;
 color: #bfc0c0;
-background: #FEEEE2;
+background: white;
 outline: none;
 }
 
@@ -348,10 +345,11 @@ outline: none;
   
 .first-button:hover{
     color: white;
-    text-shadow: 0px 1px 5px #610e0e;
+    text-shadow: 0px 1px 5px black;
 }
 .first-button:active{
   border-bottom: none;
+  color: white;
 }
 
 
@@ -371,14 +369,14 @@ margin-top: 20px;
 padding: 20px 30px;
 border-radius: 40px;
 border: none;
-background: #FEEEE2;
+background: white;
 transition: box-shadow .35s ease !important;
 outline: none;}
 
 .second-button:hover {
 box-shadow: 5px 5px 10px black, -5px -5px 10px black;
 transition-delay: 0.5s;
-
+font-weight: 700;
 }
 .second-button:focus{
   border: none;
@@ -387,11 +385,12 @@ transition-delay: 0.5s;
 
 .second-button:active{
 background: black;
-box-shadow: 5px 5px 10px #FEEEE2, -5px -5px 10px #FEEEE2;
+box-shadow: 5px 5px 10px white, -5px -5px 10px white;
 border: none;
 outline: none;
 color: white;
 }
+
 
 p{
 color: #bfc0c0;
@@ -452,15 +451,15 @@ p button:active{
 	text-shadow: 3px 2px #fff;
 	letter-spacing: 2px;
 	font-weight: bold;
-	color: #65453A;
+	color: black;
 }
 .carousel-caption p{
 	width: 60%;
 	margin: auto;
 	margin-top: 5px;
 	font-size: 28px;
-	color: #fff;
-	text-shadow: 2px 2px #000;
+	color: #000;
+	text-shadow: 2px 2px #fff;
 	line-height: 1.9;
 	font-family: poppins;
 }
@@ -713,24 +712,24 @@ p button:active{
   }
   
   form .action input[type="submit"]{
-    background: #FEEEE2;
+    background: white;
     color: black;
   }
   
   form .action input:hover[type="submit"]{
-    background: #65453A;
+    background: black;
     color: white;
   }
 
   form .action input[type="reset"]{
-    background: #FEEEE2;
+    background: white;
     color: black;
     width: 17%;
 
   }
   
   form .action input:hover[type="reset"]{
-    background: #65453A;
+    background: black;
     color: white;
   }
 
@@ -742,7 +741,7 @@ p button:active{
     font-weight: 600;
     width: 38px;
     margin-right: 10px;
-    color: #65453A;
+    color: #0002;
     text-decoration: none;
   }
 
@@ -776,13 +775,13 @@ p button:active{
   .wrapper .icon span i{
     line-height: 40px;
     font-size: 20px;
-    color: #65453A;
+    color: rgb(123, 122, 122);
   }
 
   .wrapper .icon span i:hover{
     line-height: 40px;
     font-size: 20px;
-    color: #FEEEE2;
+    color: white;
   }
 
   .wrapper .icon .tooltip{
@@ -889,7 +888,7 @@ p button:active{
     }
 
     #nav-checkbox:Checked ~ .nav-menu{
-        background: #FEEEE2;
+        background: white;
         margin-top: 10px;
         padding: 10px 0;
         border-top: 1px solid #fff;
@@ -1096,6 +1095,6 @@ p button:active{
   opacity:0.3;
   font-size:20px;
   margin-bottom:0;
-  border-top: 2px solid #FEEEE2;
+  border-top: 2px solid white;
   margin-top: 2rem;
 }

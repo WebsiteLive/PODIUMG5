@@ -67,7 +67,7 @@
                             <div class="input-field"><input placeholder="Email" class="validate" name="email" required></div>
                             <div class="input-field"><input type="password" placeholder="Password" class="validate" name="password" required></div>
                                 <button class="second-button">Login</button>
-                                <p>Don't have an account? <a onclick="myFunction()">Sign Up</a></p>   
+                                <p>Don't have an account? <a onclick="myFunction()" style="color: white;">Sign Up</a></p>   
                         </div>             
                      </form>
                 </div>
@@ -154,7 +154,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <input type="submit" class="signup-button" value="SIGNUP"> 
+                                <input type="submit" class="signup-button" value="SIGN UP"> 
                             </form>
                         </div>
                     </form>
@@ -166,13 +166,13 @@
 	<!--IMAGE SLIDER-->
 	<div id="carouselExampleIndicators" class="carousel slide image-carousel" data-ride="carousel">
 	    <ol class="carousel-indicators">
-	    	<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+	    	<li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
 	    	<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 	   		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 		</ol>
 	    <div class="carousel-inner">
 	    	<div class="carousel-item active">
-	        	<img class="d-block w-100 image-carousel" src="img/m.jpg" alt="PODIUM">
+	        	<img class="d-block w-100 image-carousel" src="img/2ndpic.jpg" alt="PODIUM">
 	        	<div class="carousel-caption d-md-block text" style="color: #65453A;">
 				    <h5 class="animate__animated animate__slideInUp text">PODIUM: Artist Freelancing Website</h5>
 				    <p class="animate__animated animate__slideInUp"><i>"Every artist was first an amateur."</i></p>
@@ -181,7 +181,7 @@
 				</div>
 	    	</div>
 		    <div class="carousel-item">
-		        <img class="d-block w-100 image-carousel" src="img/2ndpic.jpg" alt="2nd Slide">
+		        <img class="d-block w-100 image-carousel" src="img/m.jpg" alt="2nd Slide">
 		        <div class="carousel-caption d-md-block">
 				    <h5 class="text">DREAM BIG AND LET YOUR ART SHINE</h5>
 					<?php
