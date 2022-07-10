@@ -7,9 +7,9 @@
     $creator=$_SESSION['User_Id'];
     $thread_id=id_generator('$id');
     $item_type=$_POST['item_type'];
-    $post_type=$_POST['post_type'];
+    $post_type=$_POST['radio'];
     $dimension=$_POST['dimension'];
-    $post_caption=$_POST['caption'];
+    $post_caption=$_POST['Caption'];
     $post_description=$_POST['desc'];
 
     $price=$_POST['Price'];
@@ -34,7 +34,7 @@
         ,date_published
         ,item_title)VALUES('$creator','$thread_id','$img_upload_path','$dimension','$item_type','$post_type','$post_caption','$post_description','$price','$date','$title')";
         $result = odbc_exec($con,$query);
-        header("Location: Freelancepage.php");
+        header("Location: Freelancerpage.php");
     }
     
 ?>
