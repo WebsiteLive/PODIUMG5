@@ -15,8 +15,6 @@
        $address=$row['user_address'];
        $bday=$row['user_birthdate'];
 
-       
-       
        /*$name=$row['first_name']." ".$row['last_name'];*/
  
  
