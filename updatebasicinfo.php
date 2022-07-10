@@ -9,8 +9,9 @@ session_start();
     $ename=$_POST['ename'];
     $address=$_POST['address'];
     $bday=$_POST['bday'];
+    
  
-    /*
+    
 
    
 
@@ -35,6 +36,6 @@ session_start();
     }
      
 
-*/
+
     
 ?>

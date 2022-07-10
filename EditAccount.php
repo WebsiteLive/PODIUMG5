@@ -34,7 +34,7 @@
     <title>Personal Information</title>
 </head>
 <body style="background-image: url(Account.jpg); background-size: cover;">
-    <form action="updatebasicinfo.php">
+    <form action="updatebasicinfo.php" method="post">
     <div class="wrapper">
         <div class="title">
           Edit Account

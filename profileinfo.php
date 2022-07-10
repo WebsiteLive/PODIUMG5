@@ -33,7 +33,7 @@
                 <center>
                 <div class="profile-pic-div">
                     <img src="img/yoshihara-motoki-art.jpg" id="photo">
-                    <input type="file" id="file" name="imgfile">
+                    <input type="file" id="file" name="imgfile" required>
                     <label for="file" id="uploadBtn">Choose Photo</label>
                 </div>
                 </center>
