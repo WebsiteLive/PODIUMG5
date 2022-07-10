@@ -41,10 +41,10 @@ em{
 
 }
 .btn-dark{
-	background-color: #614537;
+	background-color: black;
 }
 body{
-	background-color: #FEEEE2;
+	background-color: white;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 }
@@ -63,7 +63,7 @@ body{
 		cursor: pointer;
 		border-radius: 35px;
 		padding: 5px 15px 5px 15px;
-		background-color: #614537;
+		background-color: black;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -100,7 +100,7 @@ body{
 			cursor: pointer;
 			border-radius: 35px;
 			padding: 5px 15px 5px 15px;
-			background-color: #614537;
+			background-color: black;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
