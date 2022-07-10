@@ -1,3 +1,27 @@
+<?php
+   session_start();
+   include 'dbcon.php';
+
+   $id=$_SESSION['User_Id'];
+
+      $query = "SELECT* 
+      FROM user_basicinfo WHERE User_Id='$id'";
+      $result = odbc_exec($con,$query);
+      while ($row = odbc_fetch_array($result)) {
+       $fname=$row['first_name'];
+       $mname=$row['middle_name'];
+       $lname=$row['last_name'];
+       $ename=$row['ext_name'];
+       $address=$row['user_address'];
+       $bday=$row['user_birthdate'];
+       
+       /*$name=$row['first_name']." ".$row['last_name'];*/
+ 
+ 
+      
+ 
+   }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,48 +42,28 @@
         <div class="form">
            <div class="inputfield">
               <label>First Name</label>
-              <input type="text" class="input" required>
+              <input type="text" class="input" value="<?php echo $fname?>"required>
            </div>  
            <div class="inputfield">
             <label>Middle Name</label>
-            <input type="text" class="input" required>
+            <input type="text" class="input" value="<?php echo $mname?>"required>
          </div>  
             <div class="inputfield">
               <label>Last Name</label>
-              <input type="text" class="input" required>
+              <input type="text" class="input" value="<?php echo $lname?>"required>
            </div>
            <div class="inputfield">
             <label>Extension Name</label>
-            <input type="text" class="input" placeholder="Jr">
+            <input type="text" class="input"value="<?php echo $ename?>" placeholder="Jr">
          </div>  
-           <div class="inputfield">
-            <label>Old Password</label>
-            <input type="password" class="input" required>
-         </div>    
-           <div class="inputfield">
-              <label>New Password</label>
-              <input type="password" class="input" required>
-           </div>  
-          <div class="inputfield">
-              <label>Confirm Password</label>
-              <input type="password" class="input" required>
-           </div> 
-           <div class="inputfield">
-            <label>Username</label>
-            <input type="text" class="input" required>
-         </div> 
-          
-            <div class="inputfield">
-              <label>Email Address</label>
-              <input type="text" class="input" required>
-           </div> 
+           
           <div class="inputfield">
               <label>Address</label>
-              <textarea class="textarea" required></textarea>
+              <textarea class="textarea" value="<?php echo $address?>"required></textarea>
            </div>   
            <div class="inputfield">
             <label>Date of Birth</label>
-            <input type="date" class="input" required>
+            <input type="date" class="input" value="<?php echo $bday?>"required>
          </div>   
           <div class="inputfield">
             <input type="submit" value="Update" class="btn">

@@ -43,7 +43,15 @@
          <span class="tooltip">Home</span>
       </li>
       <li>
-       <a href="freelancerpage.php">
+       <a href="<?php 
+          $usertype=$_SESSION['user_type'];
+          if($usertype=='Freelancer'){
+            echo'freelancerpage.php';
+          }
+          else{
+            echo'EditAccount.php';
+          }
+       ?>">
          <i class="fa-solid fa-user-pen"></i>
          <span class="links_name">Account</span>
        </a>
