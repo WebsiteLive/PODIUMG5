@@ -78,7 +78,10 @@
                             <div class="close-btn" onclick="myFunction()" style="cursor: pointer;"><img src="img/close.png" alt=""></div>
 
                             <h1 class="signup-modal">SIGN UP</h1> 
-                            
+                            <?php if(isset($_GET['mess'])):?>
+                                    <p><?php echo $_GET['mess']?>
+                                    
+                            <?php endif?>
                             <form action="signup.php" method="post">
                                 <div class="form-row">
                                     <div class="col-sm-6 mb-3">
@@ -95,18 +98,18 @@
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text" id="inputGroupPrepend2">@</span>
                                                         </div>
-                                                        <input type="text" class="form-control" id="validationDefaultUsername" placeholder="juandc" aria-describedby="inputGroupPrepend3" required>    
+                                                        <input name="uname"type="text" class="form-control" id="validationDefaultUsername" placeholder="juandc" aria-describedby="inputGroupPrepend3" required>    
                                                     </div>    
                                                 </div>
 
                                                 <div class="col-md-12 mb-3">
                                                     <label for="validationDefault02">Password</label>
-                                                    <input type="password" class="form-control" id="validationDefault02" required> 
+                                                    <input name="password"type="password" class="form-control" id="validationDefault02" required> 
                                                 </div>
 
                                                 <div class="col-md-12 mb-3">
                                                     <label for="validationDefault03"> Confirm Password</label>
-                                                    <input type="password" class="form-control" id="validationDefault03" required> 
+                                                    <input name="cpassword" type="password" class="form-control" id="validationDefault03" required> 
                                                 </div>
 
                                             </div>
@@ -118,29 +121,29 @@
                                                 <div class="form-row">
                                                     <div class="col-md-6 mb-3">
                                                         <label for="validationDefault04">First Name</label>
-                                                        <input type="text" class="form-control" id="validationDefault04" placeholder="Juan Miguel"  required> 
+                                                        <input name="fname"type="text" class="form-control" id="validationDefault04" placeholder="Juan Miguel"  required> 
                                                     </div>
 
                                                     <div class="col-md-6 mb-3">
                                                         <label for="validationDefault05"> Middle Name</label>
-                                                        <input type="text" class="form-control" id="validationDefault05" placeholder="Luna"  required> 
+                                                        <input name="mname"type="text" class="form-control" id="validationDefault05" placeholder="Luna"  > 
                                                     </div>
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="col-md-6 mb-3">
                                                         <label for="validationDefault06">Last Name</label>
-                                                        <input type="text" class="form-control" id="validationDefault06" placeholder="Dela Cruz"  required> 
+                                                        <input name="lname"type="text" class="form-control" id="validationDefault06" placeholder="Dela Cruz"  required> 
                                                     </div>
 
                                                     <div class="col-md-6 mb-3">
                                                         <label for="validationDefault07"> Name Ext.</label>
-                                                        <input type="text" class="form-control" id="validationDefault07" placeholder="jr."> 
+                                                        <input name="extname"type="text" class="form-control" id="validationDefault07" placeholder="jr."> 
                                                     </div>
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="col-md-12 mb-3">
                                                         <label for="validationDefault08">Address</label>
-                                                        <input type="text" class="form-control" id="validationDefault08" placeholder="Malolos, Bulacan"  required> 
+                                                        <input name="address"type="text" class="form-control" id="validationDefault08" placeholder="Malolos, Bulacan"  required> 
                                                     </div>
                                                 </div>
                                                 <div class="form-row">
