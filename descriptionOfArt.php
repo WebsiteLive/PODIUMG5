@@ -1,3 +1,32 @@
+<?php
+	session_start();
+	include 'dbcon.php';
+	$art_id=$_GET['threadid'];
+
+	if(!$con){
+        header("Location: Ghost.html");
+    }
+    else{
+		$query = "SELECT art_submission.Creator_Id,user_basicinfo.first_name,user_basicinfo.middle_name,user_basicinfo.last_name,art_submission.item_title
+		,art_submission.post_description,art_submission.item_imgurl,art_submission.item_dimension,art_submission.item_type
+		FROM user_basicinfo
+		RIGHT JOIN art_submission ON art_submission.Creator_Id=user_basicinfo.User_Id WHERE thread_Id='$art_id'";
+        $result = odbc_exec($con,$query);
+                               
+            if(!empty($result)) {
+                while ($row = odbc_fetch_array($result)) {
+                $title=$row['item_title'];
+                $name=$row['first_name'];
+                $img_url=$row['item_imgurl'];
+                $desc=$row['post_description'];
+				$type=$row['item_type'];
+				$dimension=$row['item_dimension'];
+				$creator=$row['Creator_Id'];
+                
+                }
+			}
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,9 +46,7 @@
 </head>
 
 <body>
-	<?php
-		include 'include/navbarnew.php';
-	?>
+
 	<div class="container">
 		<div class="col-sm-12"> Description of Art</div>
 	</div>	
@@ -28,27 +55,25 @@
 	<div class="container">	  
 		<div class="row justify-content-around">
 		    <div class="col-sm-6">
-		    	<img class="img-fluid" src="sample.jpg" alt="artwork">
+		    	<img class="img-fluid" src="<?php ECHO $img_url?>" alt="artwork">
 		    </div>
 		    <div class="col-sm-6">
 
 				<div class ="container">
 					<div class="text">
-						<h4>The Virgin and Child with St Anne</h4>
+						<h4><?php echo $title?></h4>
 						<br>
-						<strong>Leonardo da Vinci</strong>
+						<strong><?php echo $name?></strong>
 						<br>
-						<h5>Oil on wood</h5>
-						<em>168 x 130 cm (5 1/2 x 4 1/2 ft.)</em>
+						<h5><?php echo $type?></h5>
+						<em><?php echo $dimension?></em>
 						<br><br><br>
 						<p>
-						This painting depicted St. Anne, her daughter the Virgin Mary, and the infant Jesus. Christ is shown grappling with a sacrificial lamb symbolizing his Passion whilst the Virgin tries to restrain him. The painting was commissioned as the high altarpiece for the Church of Santissima Annunziata in Florence and its theme had long preoccupied Leonardo.
-						<br>
-						<br>
-						Here, he has arranged the figures as a pyramid set in a landscape. While the theme of the Virgin Mary, her mother (Anne), and Jesus was common, it is unusual for Mary to be portrayed in her mother's lap. The background landscape, whose crags are seemingly replicated in Anne's veil, virtually melts in its sfumato haze. The baby lamb is both a symbol of innocence and of Jesus' sacrifice for humanity, memorialized in John the Baptist's reference to Jesus as the "Lamb of God".</p>
+						<?php echo $desc?>
+		
 					</div>
 						<div class="floating-parent">
-						<a href="http://localhost/PODIUM/FOR%20REVISION/INNAI/finalpodium.html" class="widgetlabel">Go to Artist's page  <i class="far fa-long-arrow-alt-right"></i></a>
+						<a href="freelancerpage.php?userid=<?php echo $creator?>" class="widgetlabel">Go to Artist's page  <i class="far fa-long-arrow-alt-right"></i></a>
 					</div>
 				</div>
 			</div>
