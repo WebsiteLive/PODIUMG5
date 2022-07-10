@@ -22,31 +22,32 @@
             </div>
             <div class="card-body text-center" style="background-color: #444;">
                
-                <center>
-                <div class="profile-pic-div">
-                    <img src="img/yoshihara-motoki-art.jpg" id="photo">
-                    <input type="file" id="file">
-                    <label for="file" id="uploadBtn">Choose Photo</label>
-                </div>
-                </center>
+               
                 
 
                 <!--FORM-->
-                <form action="profile.php" method="post">
+                <form action="profile.php" enctype="multipart/form-data" method="post">
+                <center>
+                <div class="profile-pic-div">
+                    <img src="img/yoshihara-motoki-art.jpg" id="photo">
+                    <input type="file" id="file" name="imgfile">
+                    <label for="file" id="uploadBtn">Choose Photo</label>
+                </div>
+                </center>
                     <div class="form-row" style="padding-left: 3rem;">
                         
                     </div>
                     <br>
                     <div class="input-group" style="padding-left: 3rem;">
-                        <textarea class="form-control" style="max-width: 39.5rem;" aria-label="With textarea" placeholder="Bio" required></textarea>
+                        <textarea name= "selfintro" class="form-control" style="max-width: 39.5rem;" aria-label="With textarea" placeholder="Bio" required></textarea>
                     </div>
                     <br>
                     <div class="form-row" style="padding-left: 3rem;">
                         <div class="col" style="max-width: 20rem;">
-                            <input type="text" class="custom-select my-1 mr-sm-2" placeholder="Languages" required>      
+                            <input name= "language" type="text" class="custom-select my-1 mr-sm-2" placeholder="Languages" required>      
                         </div>
                         <div class="col" style="max-width: 20rem;">
-                            <input type="text" class="form-control" id="JobDesc" placeholder="Job Description" required>
+                            <input name= "Job_Description" type="text" class="form-control" id="JobDesc" placeholder="Job Description" required>
                         </div>
                     </div>
                     <br>
@@ -55,10 +56,10 @@
                     <h5 style="color: #fff;">Social Media Links</h5>
                     <div class="form-row" style="padding-left: 3rem;">
                         <div class="col" style="max-width: 20rem;">
-                            <input type="text" class="form-control" id="facebook" placeholder="Facebook" required>
+                            <input name= "fburl" type="text" class="form-control" id="facebook" placeholder="Facebook" required>
                         </div>
                         <div class="col" style="max-width: 20rem;">
-                            <input type="text" class="form-control" id="instagram" placeholder="Instagram">
+                            <input name= "igurl" type="text" class="form-control" id="instagram" placeholder="Instagram">
                         </div>
                     </div>
                 <br>
