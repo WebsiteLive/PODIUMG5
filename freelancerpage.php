@@ -9,7 +9,7 @@
   }
   else{
      $query = "SELECT user_basicinfo.User_Id,user_profile.Profile_img,user_profile.job_desc,user_profile.language,user_profile.fb_url,user_profile.ig_url
-     ,user_profile.self_description, user_basicinfo.first_name,user_basicinfo.first_name,user_basicinfo.last_name
+     ,user_profile.self_description, user_basicinfo.first_name,user_basicinfo.first_name,user_basicinfo.last_name,user_basicinfo.user_birthdate
      FROM user_profile
      JOIN user_basicinfo ON user_profile.User_Id=user_basicinfo.User_Id WHERE user_basicinfo.User_Id='$id'";
      $result = odbc_exec($con,$query);
@@ -17,8 +17,14 @@
       $img=$row['Profile_img'];
       $intro=$row['self_description'];
       $jd=$row['job_desc'];
+      $lang=$row['language'];
+      $bday=$row['user_birthdate'];
+      $now = date_create()->format('Y-m-d');
       $name=$row['first_name']." ".$row['last_name'];
 
+      /*
+      $age = $bday - $now;
+   */
 
      }
 
@@ -38,8 +44,8 @@
     <header>
     <div class="user">
         <img src="<?php echo $img?>" alt="">
-        <h3 class="name">Adrian Pulao</h3>
-        <p class="position">Digital Artist</p>
+        <h3 class="name"><?php echo $name?></h3>
+        <p class="position"><?php echo $jd?></p>
     </div>
     <nav class="navbar">
         <ul>
@@ -56,8 +62,8 @@
     <section class="home" id="home">
         <div class="description">
         <h3>HI THERE!</h3>
-        <h1>I'm <span>Adrian Pulao</span></h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae explicabo cupiditate in aliquam assumenda, saepe necessitatibus dignissimos dolore molestias distinctio! Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</p>
+        <h1>I'm <span><?php echo $name?></span></h1>
+        <p><?php echo $intro?></p>
         <div class="logo">
             <a href=""><img src="images/facebook.png" alt="" class="facebook"></a>
             <a href=""><img src="images/instagram.png" alt="" class="instagram"></a>
@@ -69,11 +75,10 @@
         <div class="container">
             
             <div class="home-about">
-                    <h3><span>Name: </span>Adrian Pulao</h3>
-                    <h3><span>Age: </span>20</h3>
-                    <h3><span>Qualification: </span>BMS</h3>
-                    <h3><span>Position: </span>Front End Web Developer</h3>
-                    <h3><span>Language: </span>Tagalog/Englsih</h3>
+                    <h3><span>Name: </span><?php echo $name?></h3>
+                    <h3><span>Age: </span>21</h3>
+                    <h3><span>Position: </span><?php echo $jd?></h3>
+                    <h3><span>Language: </span><?php echo $lang?></h3>
             </div>
         </div>
     </section>
