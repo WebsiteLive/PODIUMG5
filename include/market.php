@@ -58,7 +58,7 @@
   
        <?php 
        if(!$con){
-         header("Location: Ghost.html");
+         header("Location: Error.php");
          }
          else{
 
