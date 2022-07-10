@@ -22,9 +22,11 @@
                         while ($row = odbc_fetch_array($result)) {
                         $id=$row['thread_Id'];    
                         $title=$row['item_title'];
-                        $price=$row['price'];
-                         $img_url=$row['item_imgurl'];
-                        $desc=$row['post_description'];
+                        $img_url=$row['item_imgurl'];
+                        $Caption=$row['post_caption'];
+                        echo $caption;
+
+                        
                         include 'items_commision.php';
                       
                         }
