@@ -36,8 +36,8 @@
         <h1>I'm <span>Adrian Pulao</span></h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae explicabo cupiditate in aliquam assumenda, saepe necessitatibus dignissimos dolore molestias distinctio! Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</p>
         <div class="logo">
-            <img src="images/facebook.png" alt="" class="facebook">
-            <img src="images/instagram.png" alt="" class="instagram">
+            <a href=""><img src="images/facebook.png" alt="" class="facebook"></a>
+            <a href=""><img src="images/instagram.png" alt="" class="instagram"></a>
         </div>
         </div>
     </section>
@@ -65,43 +65,43 @@
                   <img src="images/img1.jpg" alt="">
                   <h3><i> Mona Lisa</i></h3>
                   <div class="artist">Camille Gudio</div>
-                  <div class="price">$2.00</div>
+                  <div class="price">₱2.00</div>
                </div>
                <div class="product" data-name="p-1">
                   <img src="images/img1.jpg" alt="">
                   <h3><i> Mona Lisa</i></h3>
                   <div class="artist">Camille Gudio</div>
-                  <div class="price">$2.00</div>
+                  <div class="price">₱2.00</div>
                </div>
                <div class="product" data-name="p-1">
                   <img src="images/img1.jpg" alt="">
                   <h3><i> Mona Lisa</i></h3>
                   <div class="artist">Camille Gudio</div>
-                  <div class="price">$2.00</div>
+                  <div class="price">₱2.00</div>
                </div>
                <div class="product" data-name="p-1">
                   <img src="images/img1.jpg" alt="">
                   <h3><i> Mona Lisa</i></h3>
                   <div class="artist">Camille Gudio</div>
-                  <div class="price">$2.00</div>
+                  <div class="price">₱2.00</div>
                </div>
                <div class="product" data-name="p-1">
                   <img src="images/img1.jpg" alt="">
                   <h3><i> Mona Lisa</i></h3>
                   <div class="artist">Camille Gudio</div>
-                  <div class="price">$2.00</div>
+                  <div class="price">₱2.00</div>
                </div>
                <div class="product" data-name="p-1">
                   <img src="images/img1.jpg" alt="">
                   <h3><i> Mona Lisa</i></h3>
                   <div class="artist">Camille Gudio</div>
-                  <div class="price">$2.00</div>
+                  <div class="price">₱2.00</div>
                </div>
                <div class="product" data-name="p-1">
                   <img src="images/img1.jpg" alt="">
                   <h3><i> Mona Lisa</i></h3>
                   <div class="artist">Camille Gudio</div>
-                  <div class="price">$2.00</div>
+                  <div class="price">₱2.00</div>
                </div>
       
                <div class="product" data-name="p-2">
@@ -159,7 +159,7 @@
                         </div> 
                        <div class="inputfield" id="forsale">
                         <label>Description</label>
-                        <textarea id="my-text" rows="5" class="textarea" name="desc" ></textarea>
+                        <textarea  id="my-text" rows="5" class="textarea" name="desc" ></textarea>
                         <p id="result"></p>
                         <label>Price</label>
                            <input type="number" class="input" placeholder="₱" name="Price">
@@ -215,7 +215,7 @@
                        }
                        else if(rdvalue == "Commision"){
                            document.getElementById("forsale").style.display="none";
-                          document.getElementById("forcommision").style.display="block";
+                          document.getElementById("forcommision").style.display="flex";
                           
                        }
                     }
