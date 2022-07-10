@@ -30,7 +30,7 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <img src="image/podium.png" alt="" class="icon">
+      <img src="img/wpodium.png" alt="" class="icon">
         <div class="logo_name"><a href="index.php" style="color: white;">&nbsp; &nbsp;PODIUM</a></div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
