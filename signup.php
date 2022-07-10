@@ -54,7 +54,7 @@
             echo $result,$result2;
  
             if(!$result || !$result2 || !$result3){
-             header("Location: Ghost.html");
+             header("Error.php");
             }
             else{
              $mess="Sign Up Succes";
